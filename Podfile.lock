@@ -1,0 +1,29 @@
+PODS:
+  - Asterism (1.0.0)
+  - Bolts/Tasks (1.2.0)
+  - Mantle (1.5.4):
+    - Mantle/extobjc (= 1.5.4)
+  - Mantle/extobjc (1.5.4)
+  - MTLParseAdapter (0.1.0):
+    - Asterism (~> 1.0)
+    - Mantle (~> 1.5)
+    - Parse (~> 1.6)
+  - Parse (1.7.5.3):
+    - Bolts/Tasks (>= 1.2.0)
+  - ParseUI (1.1.4):
+    - Parse (~> 1.7)
+
+DEPENDENCIES:
+  - MTLParseAdapter
+  - Parse (~> 1.7.2)
+  - ParseUI
+
+SPEC CHECKSUMS:
+  Asterism: b2992aaf4ac2dbc66c3aea3a6412c67e3e689835
+  Bolts: d176cb1e0012175589e389a9db49b85e27787576
+  Mantle: 60acd0cd363e27d945bda0a6b8e90577112d28f3
+  MTLParseAdapter: ca4a1df75b4fe332ec618762f43d785f559cae2b
+  Parse: 373adbb1ad2e34d383542c3b28f678c49ebe4881
+  ParseUI: d1228541b02a36a7354c8f47747f5f7a89cf1ff0
+
+COCOAPODS: 0.37.2
