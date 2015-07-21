@@ -7,6 +7,10 @@
 //
 
 #import "AppDelegate.h"
+#import "ARFConstants.h"
+#import "ARFPromosViewController.h"
+
+#import <Parse/Parse.h>
 
 @interface AppDelegate ()
 
@@ -16,7 +20,21 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    //Parse Registration
+    [Parse setApplicationId:kParseApplicationId
+                  clientKey:kParseClientKey];
+    
+    
+    ARFPromosViewController *promoVC = [[ARFPromosViewController alloc] initWithStyle:UITableViewStylePlain];
+    UINavigationController *promosNavVC = [[UINavigationController alloc] initWithRootViewController:promoVC];
+    
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window.rootViewController = promosNavVC;
+    self.window.backgroundColor = [UIColor clearColor];
+    [self.window makeKeyAndVisible];
+    
+    
     return YES;
 }
 

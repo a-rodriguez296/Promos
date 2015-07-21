@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5A3CE3BF3111A64DBCB505BB /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EC9B96D38D16D5ABEA2AAA80 /* libPods.a */; };
+		9C0C66DE1B5EE8670040CF98 /* ARFPromosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C0C66DD1B5EE8670040CF98 /* ARFPromosViewController.m */; };
 		9C64E1B21B5EE3C000645C27 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C64E1B11B5EE3C000645C27 /* main.m */; };
 		9C64E1B51B5EE3C000645C27 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C64E1B41B5EE3C000645C27 /* AppDelegate.m */; };
 		9C64E1BD1B5EE3C000645C27 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C64E1BC1B5EE3C000645C27 /* Images.xcassets */; };
@@ -27,6 +28,9 @@
 
 /* Begin PBXFileReference section */
 		42049B0E27E01B487BC04EF2 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		9C0C66D51B5EE79B0040CF98 /* ARFConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ARFConstants.h; sourceTree = "<group>"; };
+		9C0C66DC1B5EE8670040CF98 /* ARFPromosViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARFPromosViewController.h; sourceTree = "<group>"; };
+		9C0C66DD1B5EE8670040CF98 /* ARFPromosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARFPromosViewController.m; sourceTree = "<group>"; };
 		9C64E1AC1B5EE3C000645C27 /* Promos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Promos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C64E1B01B5EE3C000645C27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9C64E1B11B5EE3C000645C27 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -68,6 +72,31 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		9C0C66D61B5EE7C80040CF98 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				9C0C66D51B5EE79B0040CF98 /* ARFConstants.h */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		9C0C66DA1B5EE82B0040CF98 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				9C0C66DB1B5EE8460040CF98 /* Promos */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		9C0C66DB1B5EE8460040CF98 /* Promos */ = {
+			isa = PBXGroup;
+			children = (
+				9C0C66DC1B5EE8670040CF98 /* ARFPromosViewController.h */,
+				9C0C66DD1B5EE8670040CF98 /* ARFPromosViewController.m */,
+			);
+			name = Promos;
+			sourceTree = "<group>";
+		};
 		9C64E1A31B5EE3C000645C27 = {
 			isa = PBXGroup;
 			children = (
@@ -91,6 +120,8 @@
 		9C64E1AE1B5EE3C000645C27 /* Promos */ = {
 			isa = PBXGroup;
 			children = (
+				9C0C66D61B5EE7C80040CF98 /* Utils */,
+				9C0C66DA1B5EE82B0040CF98 /* Controllers */,
 				9C64E1B31B5EE3C000645C27 /* AppDelegate.h */,
 				9C64E1B41B5EE3C000645C27 /* AppDelegate.m */,
 				9C64E1BC1B5EE3C000645C27 /* Images.xcassets */,
@@ -269,6 +300,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C0C66DE1B5EE8670040CF98 /* ARFPromosViewController.m in Sources */,
 				9C64E1B51B5EE3C000645C27 /* AppDelegate.m in Sources */,
 				9C64E1B21B5EE3C000645C27 /* main.m in Sources */,
 			);
