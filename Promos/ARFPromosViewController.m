@@ -8,14 +8,24 @@
 
 #import "ARFPromosViewController.h"
 #import "ARFConstants.h"
+#import "ARFPromoCell.h"
 
 #import <Parse/Parse.h>
+
+
+static NSString* const kPromoCellIdentifier        = @"Cell";
 
 @interface ARFPromosViewController ()
 
 @end
 
 @implementation ARFPromosViewController
+
+-(void)viewDidLoad{
+    [super viewDidLoad];
+    
+    [self.tableView registerClass:[ARFPromoCell class] forCellReuseIdentifier:kPromoCellIdentifier];
+}
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
@@ -76,9 +86,28 @@
         query.cachePolicy = kPFCachePolicyCacheThenNetwork;
     }
     
-    [query orderByDescending:@"createdAt"];
+    [query orderByDescending:kAttributeCreatedAt];
     
     return query;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath object:(PFObject *)object {
+    
+    
+    ARFPromoCell *cell = (ARFPromoCell *)[tableView dequeueReusableCellWithIdentifier:kPromoCellIdentifier];
+    [cell setBackgroundColor:[UIColor redColor]];
+    // Configure the cell
+    [cell configureCellWithPFObject:object];
+    
+    return cell;
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 77;
+}
+
+- (PFObject *)objectAtIndex:(NSIndexPath *)indexPath {
+    return [self.objects objectAtIndex:indexPath.row];
 }
 
 @end

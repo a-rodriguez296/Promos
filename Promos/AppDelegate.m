@@ -24,13 +24,15 @@
     //Parse Registration
     [Parse setApplicationId:kParseApplicationId
                   clientKey:kParseClientKey];
-    
-    
+
     ARFPromosViewController *promoVC = [[ARFPromosViewController alloc] initWithStyle:UITableViewStylePlain];
     UINavigationController *promosNavVC = [[UINavigationController alloc] initWithRootViewController:promoVC];
     
+    UITabBarController *tabBC = [[UITabBarController alloc] init];
+    [tabBC setViewControllers:@[promosNavVC]];
+    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    self.window.rootViewController = promosNavVC;
+    self.window.rootViewController = tabBC;
     self.window.backgroundColor = [UIColor clearColor];
     [self.window makeKeyAndVisible];
     
