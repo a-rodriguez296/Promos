@@ -9,6 +9,7 @@
 #import "ARFPromosViewController.h"
 #import "ARFConstants.h"
 #import "ARFPromoCell.h"
+#import "ARFPromosDetailViewController.h"
 
 #import <Parse/Parse.h>
 #import <ParseUI/ParseUI.h>
@@ -106,6 +107,14 @@ static NSString* const kPromoCellIdentifier        = @"Cell";
 
 - (PFObject *)objectAtIndex:(NSIndexPath *)indexPath {
     return [self.objects objectAtIndex:indexPath.row];
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    PFObject *promo = [self objectAtIndex:indexPath];
+    
+    ARFPromosDetailViewController *promoDetailVC = [[ARFPromosDetailViewController alloc] initWithPromo:promo];
+    [self.navigationController pushViewController:promoDetailVC animated:YES];
 }
 
 @end

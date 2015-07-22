@@ -23,6 +23,7 @@ static NSString* const kPromosAttributeTitle        = @"title";
 static NSString* const kPromosAttributeSubtitle     = @"subtitle";
 static NSString* const kPromosAttributeDetail       = @"detail";
 static NSString* const kPromosAttributeLogo         = @"logo";
+static NSString* const kPromosAttributePass         = @"pass";
 
 static NSString* const kAttributeCreatedAt        = @"cratedAt";
 

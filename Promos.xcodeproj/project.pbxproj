@@ -11,6 +11,8 @@
 		9C0C66DE1B5EE8670040CF98 /* ARFPromosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C0C66DD1B5EE8670040CF98 /* ARFPromosViewController.m */; };
 		9C0C66E21B5EEF040040CF98 /* ARFPromoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C0C66E01B5EEF040040CF98 /* ARFPromoCell.m */; };
 		9C0C66E31B5EEF040040CF98 /* ARFPromoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C0C66E11B5EEF040040CF98 /* ARFPromoCell.xib */; };
+		9C0C66E81B5F3C420040CF98 /* ARFPromosDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C0C66E61B5F3C420040CF98 /* ARFPromosDetailViewController.m */; };
+		9C0C66E91B5F3C420040CF98 /* ARFPromosDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C0C66E71B5F3C420040CF98 /* ARFPromosDetailViewController.xib */; };
 		9C64E1B21B5EE3C000645C27 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C64E1B11B5EE3C000645C27 /* main.m */; };
 		9C64E1B51B5EE3C000645C27 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C64E1B41B5EE3C000645C27 /* AppDelegate.m */; };
 		9C64E1BD1B5EE3C000645C27 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C64E1BC1B5EE3C000645C27 /* Images.xcassets */; };
@@ -36,6 +38,9 @@
 		9C0C66DF1B5EEF040040CF98 /* ARFPromoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARFPromoCell.h; sourceTree = "<group>"; };
 		9C0C66E01B5EEF040040CF98 /* ARFPromoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARFPromoCell.m; sourceTree = "<group>"; };
 		9C0C66E11B5EEF040040CF98 /* ARFPromoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ARFPromoCell.xib; sourceTree = "<group>"; };
+		9C0C66E51B5F3C420040CF98 /* ARFPromosDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARFPromosDetailViewController.h; sourceTree = "<group>"; };
+		9C0C66E61B5F3C420040CF98 /* ARFPromosDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARFPromosDetailViewController.m; sourceTree = "<group>"; };
+		9C0C66E71B5F3C420040CF98 /* ARFPromosDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ARFPromosDetailViewController.xib; sourceTree = "<group>"; };
 		9C64E1AC1B5EE3C000645C27 /* Promos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Promos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C64E1B01B5EE3C000645C27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9C64E1B11B5EE3C000645C27 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -96,8 +101,8 @@
 		9C0C66DB1B5EE8460040CF98 /* Promos */ = {
 			isa = PBXGroup;
 			children = (
-				9C0C66DC1B5EE8670040CF98 /* ARFPromosViewController.h */,
-				9C0C66DD1B5EE8670040CF98 /* ARFPromosViewController.m */,
+				9C0C66EA1B5F3C4B0040CF98 /* List */,
+				9C0C66EB1B5F3C530040CF98 /* Detail */,
 			);
 			name = Promos;
 			sourceTree = "<group>";
@@ -110,6 +115,25 @@
 				9C0C66E11B5EEF040040CF98 /* ARFPromoCell.xib */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		9C0C66EA1B5F3C4B0040CF98 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				9C0C66DC1B5EE8670040CF98 /* ARFPromosViewController.h */,
+				9C0C66DD1B5EE8670040CF98 /* ARFPromosViewController.m */,
+			);
+			name = List;
+			sourceTree = "<group>";
+		};
+		9C0C66EB1B5F3C530040CF98 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				9C0C66E51B5F3C420040CF98 /* ARFPromosDetailViewController.h */,
+				9C0C66E61B5F3C420040CF98 /* ARFPromosDetailViewController.m */,
+				9C0C66E71B5F3C420040CF98 /* ARFPromosDetailViewController.xib */,
+			);
+			name = Detail;
 			sourceTree = "<group>";
 		};
 		9C64E1A31B5EE3C000645C27 = {
@@ -267,6 +291,7 @@
 				9C0C66E31B5EEF040040CF98 /* ARFPromoCell.xib in Resources */,
 				9C64E1C01B5EE3C000645C27 /* LaunchScreen.xib in Resources */,
 				9C64E1BD1B5EE3C000645C27 /* Images.xcassets in Resources */,
+				9C0C66E91B5F3C420040CF98 /* ARFPromosDetailViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,6 +346,7 @@
 				9C64E1B51B5EE3C000645C27 /* AppDelegate.m in Sources */,
 				9C64E1B21B5EE3C000645C27 /* main.m in Sources */,
 				9C0C66E21B5EEF040040CF98 /* ARFPromoCell.m in Sources */,
+				9C0C66E81B5F3C420040CF98 /* ARFPromosDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
