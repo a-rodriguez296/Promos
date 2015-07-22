@@ -10,8 +10,9 @@
 #import "ARFConstants.h"
 
 #import <Parse/Parse.h>
+#import <PassKit/PassKit.h>
 
-@interface ARFPromosDetailViewController ()
+@interface ARFPromosDetailViewController () <PKAddPassesViewControllerDelegate>
 
 @end
 
@@ -51,10 +52,43 @@
     PFFile *pass = [self.promo objectForKey:kPromosAttributePass];
     [pass getDataInBackgroundWithBlock:^(NSData * result, NSError * error){
         
+        if (![PKPassLibrary isPassLibraryAvailable]) {
+            [[[UIAlertView alloc] initWithTitle:@"Error"
+                                        message:@"PassKit not available"
+                                       delegate:nil
+                              cancelButtonTitle:@"Pitty"
+                              otherButtonTitles: nil] show];
+            return;
+        }
+        else{
+            
+            NSError* error = nil;
+            PKPass *newPass = [[PKPass alloc] initWithData:result
+                                                     error:&error];
+            PKAddPassesViewController *addController =
+            [[PKAddPassesViewController alloc] initWithPass:newPass];
+            
+            addController.delegate = self;
+            [self presentViewController:addController
+                               animated:YES
+                             completion:nil];
+            
+        }
+        
+        
     }progressBlock:^(int percentDone){
         NSLog(@"%i", percentDone);
     }];
     
+}
+
+
+#pragma mark - Pass controller delegate
+
+-(void)addPassesViewControllerDidFinish: (PKAddPassesViewController*) controller
+{
+    //pass added
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 
