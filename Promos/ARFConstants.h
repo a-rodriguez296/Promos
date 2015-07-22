@@ -18,10 +18,11 @@ static NSString* const kParseClientKey        = @"NQm4dWmObFNJq17tQOqzFYJZTTbaN3
 
 
 
-static NSString* const kPromosClassName        = @"Promo";
+static NSString* const kPromosClassName             = @"Promo";
 static NSString* const kPromosAttributeTitle        = @"title";
-static NSString* const kPromosAttributeSubtitle        = @"subtitle";
-static NSString* const kPromosAttributeDetail        = @"detail";
+static NSString* const kPromosAttributeSubtitle     = @"subtitle";
+static NSString* const kPromosAttributeDetail       = @"detail";
+static NSString* const kPromosAttributeLogo         = @"logo";
 
 static NSString* const kAttributeCreatedAt        = @"cratedAt";
 

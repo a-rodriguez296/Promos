@@ -9,9 +9,11 @@
 #import "ARFPromoCell.h"
 #import "ARFConstants.h"
 
+
+
 @interface ARFPromoCell ()
 
-@property (weak, nonatomic) IBOutlet UIImageView *imagePromo;
+@property (weak, nonatomic) IBOutlet PFImageView *imagePromo;
 @property (weak, nonatomic) IBOutlet UILabel *lblTitle;
 @property (weak, nonatomic) IBOutlet UILabel *lblSubtitle;
 
@@ -33,9 +35,9 @@
 -(void) configureCellWithPFObject:(PFObject *) object{
     
     self.lblTitle.text = [object objectForKey:kPromosAttributeTitle];
-    NSLog(@"%@",self.lblTitle.text);
     self.lblSubtitle.text = [object objectForKey:kPromosAttributeSubtitle];
-    NSLog(@"%@", self.lblSubtitle.text);
+    [self.imagePromo setFile:[object objectForKey:kPromosAttributeLogo]];
+    [self.imagePromo loadInBackground];
 }
 
 @end

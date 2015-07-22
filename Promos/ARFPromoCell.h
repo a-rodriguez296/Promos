@@ -8,9 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
+#import <ParseUI/ParseUI.h>
 
-
-@interface ARFPromoCell : UITableViewCell
+@interface ARFPromoCell : PFTableViewCell
 
 -(void) configureCellWithPFObject:(PFObject *) object;
 

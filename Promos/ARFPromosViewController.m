@@ -11,7 +11,7 @@
 #import "ARFPromoCell.h"
 
 #import <Parse/Parse.h>
-
+#import <ParseUI/ParseUI.h>
 
 static NSString* const kPromoCellIdentifier        = @"Cell";
 
@@ -24,7 +24,7 @@ static NSString* const kPromoCellIdentifier        = @"Cell";
 -(void)viewDidLoad{
     [super viewDidLoad];
     
-    [self.tableView registerClass:[ARFPromoCell class] forCellReuseIdentifier:kPromoCellIdentifier];
+    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([ARFPromoCell class]) bundle:nil] forCellReuseIdentifier:kPromoCellIdentifier];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -41,8 +41,7 @@ static NSString* const kPromoCellIdentifier        = @"Cell";
         // The className to query on
         self.parseClassName = kPromosClassName;
         
-        // The key of the PFObject to display in the label of the default cell style
-        self.textKey = kPromosAttributeTitle;
+
         
         // Uncomment the following line to specify the key of a PFFile on the PFObject to display in the imageView of the default cell style
         // self.imageKey = @"image";
@@ -93,9 +92,8 @@ static NSString* const kPromoCellIdentifier        = @"Cell";
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath object:(PFObject *)object {
     
-    
     ARFPromoCell *cell = (ARFPromoCell *)[tableView dequeueReusableCellWithIdentifier:kPromoCellIdentifier];
-    [cell setBackgroundColor:[UIColor redColor]];
+
     // Configure the cell
     [cell configureCellWithPFObject:object];
     
