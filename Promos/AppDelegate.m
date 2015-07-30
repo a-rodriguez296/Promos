@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "ARFConstants.h"
 #import "ARFPromosViewController.h"
+#import "ARFPromosDetailViewController.h"
 
 #import <Parse/Parse.h>
 #import "UAirship.h"
@@ -53,6 +54,8 @@
     
     
     
+    
+    
     //Parse Registration
     [Parse setApplicationId:kParseApplicationId
                   clientKey:kParseClientKey];
@@ -66,7 +69,7 @@
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.rootViewController = tabBC;
-    self.window.backgroundColor = [UIColor clearColor];
+    self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     
     
@@ -121,7 +124,19 @@
     
     [rootVC setSelectedIndex:0];
     
+    UINavigationController *navVC = [rootVC.viewControllers firstObject];
+    [navVC popToRootViewControllerAnimated:NO];
     
+     __weak ARFPromosViewController *promosVC = (ARFPromosViewController *)navVC.topViewController;
+    PFQuery *query = [PFQuery queryWithClassName:kPromosClassName];
+    [query getObjectInBackgroundWithId:[path lastObject] block:^(PFObject *PF_NULLABLE_S object,  NSError *PF_NULLABLE_S error){
+        
+        if (!error) {
+            ARFPromosDetailViewController *detailVC = [[ARFPromosDetailViewController alloc] initWithPromo:object];
+            [promosVC.navigationController pushViewController:detailVC animated:YES];
+            
+        }
+    }];
 }
 
 @end

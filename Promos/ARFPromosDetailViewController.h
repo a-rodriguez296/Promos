@@ -6,10 +6,12 @@
 //  Copyright (c) 2015 Alejandro Rodriguez. All rights reserved.
 //
 
+#import "ARFBaseViewController.h"
+
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
 
-@interface ARFPromosDetailViewController : UIViewController
+@interface ARFPromosDetailViewController : ARFBaseViewController
 
 @property (nonatomic, strong) PFObject * promo;
 

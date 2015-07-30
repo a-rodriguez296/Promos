@@ -14,6 +14,7 @@
 		9C0C66E81B5F3C420040CF98 /* ARFPromosDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C0C66E61B5F3C420040CF98 /* ARFPromosDetailViewController.m */; };
 		9C0C66E91B5F3C420040CF98 /* ARFPromosDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C0C66E71B5F3C420040CF98 /* ARFPromosDetailViewController.xib */; };
 		9C1105651B69B8CD000C32CF /* AirshipConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C1105641B69B8CD000C32CF /* AirshipConfig.plist */; };
+		9C1105681B69D202000C32CF /* ARFBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C1105671B69D202000C32CF /* ARFBaseViewController.m */; };
 		9C64E1B21B5EE3C000645C27 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C64E1B11B5EE3C000645C27 /* main.m */; };
 		9C64E1B51B5EE3C000645C27 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C64E1B41B5EE3C000645C27 /* AppDelegate.m */; };
 		9C64E1BD1B5EE3C000645C27 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C64E1BC1B5EE3C000645C27 /* Images.xcassets */; };
@@ -43,6 +44,8 @@
 		9C0C66E61B5F3C420040CF98 /* ARFPromosDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARFPromosDetailViewController.m; sourceTree = "<group>"; };
 		9C0C66E71B5F3C420040CF98 /* ARFPromosDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ARFPromosDetailViewController.xib; sourceTree = "<group>"; };
 		9C1105641B69B8CD000C32CF /* AirshipConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = AirshipConfig.plist; sourceTree = "<group>"; };
+		9C1105661B69D202000C32CF /* ARFBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARFBaseViewController.h; sourceTree = "<group>"; };
+		9C1105671B69D202000C32CF /* ARFBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARFBaseViewController.m; sourceTree = "<group>"; };
 		9C64E1AC1B5EE3C000645C27 /* Promos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Promos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C64E1B01B5EE3C000645C27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9C64E1B11B5EE3C000645C27 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -103,6 +106,7 @@
 		9C0C66DB1B5EE8460040CF98 /* Promos */ = {
 			isa = PBXGroup;
 			children = (
+				9C1105691B69D224000C32CF /* Base */,
 				9C0C66EA1B5F3C4B0040CF98 /* List */,
 				9C0C66EB1B5F3C530040CF98 /* Detail */,
 			);
@@ -136,6 +140,15 @@
 				9C0C66E71B5F3C420040CF98 /* ARFPromosDetailViewController.xib */,
 			);
 			name = Detail;
+			sourceTree = "<group>";
+		};
+		9C1105691B69D224000C32CF /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				9C1105661B69D202000C32CF /* ARFBaseViewController.h */,
+				9C1105671B69D202000C32CF /* ARFBaseViewController.m */,
+			);
+			name = Base;
 			sourceTree = "<group>";
 		};
 		9C64E1A31B5EE3C000645C27 = {
@@ -263,6 +276,7 @@
 					};
 					9C64E1C41B5EE3C000645C27 = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = GTY3SWQ26V;
 						TestTargetID = 9C64E1AB1B5EE3C000645C27;
 					};
 				};
@@ -351,6 +365,7 @@
 				9C64E1B21B5EE3C000645C27 /* main.m in Sources */,
 				9C0C66E21B5EEF040040CF98 /* ARFPromoCell.m in Sources */,
 				9C0C66E81B5F3C420040CF98 /* ARFPromosDetailViewController.m in Sources */,
+				9C1105681B69D202000C32CF /* ARFBaseViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -401,6 +416,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Alejandro Rodriguez (LHT5Q4MLB8)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -423,6 +439,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "df40d8ba-3169-4265-bca6-d4f9598295ef";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -444,6 +461,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Alejandro Rodriguez (LHT5Q4MLB8)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -459,6 +477,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "df40d8ba-3169-4265-bca6-d4f9598295ef";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -469,10 +488,12 @@
 			baseConfigurationReference = 42049B0E27E01B487BC04EF2 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "";
 				INFOPLIST_FILE = Promos/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "df40d8ba-3169-4265-bca6-d4f9598295ef";
 			};
 			name = Debug;
 		};
@@ -481,10 +502,12 @@
 			baseConfigurationReference = 9F6262D39024010F366E86EA /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "";
 				INFOPLIST_FILE = Promos/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "df40d8ba-3169-4265-bca6-d4f9598295ef";
 			};
 			name = Release;
 		};
@@ -492,6 +515,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -503,6 +528,7 @@
 				INFOPLIST_FILE = PromosTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Promos.app/Promos";
 			};
 			name = Debug;
@@ -511,6 +537,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -518,6 +546,7 @@
 				INFOPLIST_FILE = PromosTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Promos.app/Promos";
 			};
 			name = Release;

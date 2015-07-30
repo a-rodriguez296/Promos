@@ -7,6 +7,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ARFPromosDetailViewController">
             <connections>
+                <outlet property="imgDetail" destination="iHC-vG-N0z" id="VTx-4z-4iO"/>
+                <outlet property="lblSubtitle" destination="KSV-Nj-0eM" id="kyK-nt-w18"/>
+                <outlet property="lblTitle" destination="rEB-IK-HkC" id="P5G-2q-R6l"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -30,22 +33,60 @@
                         <action selector="donwloadPass:" destination="-1" eventType="touchUpInside" id="otD-7c-cDB"/>
                     </connections>
                 </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="rEB-IK-HkC">
+                    <rect key="frame" x="172" y="57" width="44" height="21"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="KSV-Nj-0eM">
+                    <rect key="frame" x="172" y="91" width="42" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iHC-vG-N0z" customClass="PFImageView">
+                    <rect key="frame" x="8" y="34" width="102" height="102"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="102" id="NKS-vT-ZMD"/>
+                        <constraint firstAttribute="height" constant="102" id="ejP-eP-0Yh"/>
+                    </constraints>
+                </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="Mnb-mO-HnZ" firstAttribute="centerX" secondItem="Stf-Vj-TZh" secondAttribute="centerX" id="2Wp-hA-C8G"/>
+                <constraint firstItem="rEB-IK-HkC" firstAttribute="leading" secondItem="iHC-vG-N0z" secondAttribute="trailing" constant="62" id="2be-QB-mcn">
+                    <variation key="heightClass=regular" constant="20"/>
+                </constraint>
+                <constraint firstItem="iHC-vG-N0z" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="34" id="EMX-P6-6Gz"/>
+                <constraint firstItem="iHC-vG-N0z" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="FLs-Al-xPP"/>
                 <constraint firstAttribute="centerY" secondItem="Mnb-mO-HnZ" secondAttribute="centerY" id="FsA-ls-B0U"/>
+                <constraint firstItem="rEB-IK-HkC" firstAttribute="leading" secondItem="iHC-vG-N0z" secondAttribute="trailing" constant="62" id="Mhu-bP-ohm"/>
+                <constraint firstItem="rEB-IK-HkC" firstAttribute="leading" secondItem="KSV-Nj-0eM" secondAttribute="leading" id="XKB-cI-X1z"/>
                 <constraint firstAttribute="centerX" secondItem="Mnb-mO-HnZ" secondAttribute="centerX" id="dW1-Mf-xOx"/>
+                <constraint firstItem="KSV-Nj-0eM" firstAttribute="top" secondItem="rEB-IK-HkC" secondAttribute="bottom" constant="13" id="eQw-Ni-H3V"/>
                 <constraint firstItem="Stf-Vj-TZh" firstAttribute="top" secondItem="Mnb-mO-HnZ" secondAttribute="bottom" constant="8" id="gCR-Vg-3qM"/>
+                <constraint firstItem="rEB-IK-HkC" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="h4b-5S-YvD"/>
                 <constraint firstAttribute="centerX" secondItem="Stf-Vj-TZh" secondAttribute="centerX" id="iNk-Pm-SSr"/>
+                <constraint firstItem="rEB-IK-HkC" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="57" id="lHH-eo-trn"/>
                 <constraint firstAttribute="centerY" secondItem="Stf-Vj-TZh" secondAttribute="centerY" id="mQ6-yP-uuK"/>
             </constraints>
             <variation key="default">
                 <mask key="constraints">
+                    <exclude reference="2be-QB-mcn"/>
+                    <exclude reference="Mhu-bP-ohm"/>
+                    <exclude reference="h4b-5S-YvD"/>
                     <exclude reference="iNk-Pm-SSr"/>
                     <exclude reference="mQ6-yP-uuK"/>
                 </mask>
             </variation>
+            <variation key="heightClass=regular">
+                <mask key="constraints">
+                    <include reference="2be-QB-mcn"/>
+                </mask>
+            </variation>
+            <point key="canvasLocation" x="353" y="321"/>
         </view>
     </objects>
 </document>

@@ -10,9 +10,13 @@
 #import "ARFConstants.h"
 
 #import <Parse/Parse.h>
+#import <ParseUI/ParseUI.h>
 #import <PassKit/PassKit.h>
 
 @interface ARFPromosDetailViewController () <PKAddPassesViewControllerDelegate>
+@property (weak, nonatomic) IBOutlet PFImageView *imgDetail;
+@property (weak, nonatomic) IBOutlet UILabel *lblTitle;
+@property (weak, nonatomic) IBOutlet UILabel *lblSubtitle;
 
 @end
 
@@ -40,6 +44,13 @@
     [super viewWillAppear:animated];
     
     [self setTitle:@"Detalle"];
+    
+    
+    [self.lblTitle setText:[self.promo objectForKey:kPromosAttributeTitle]];
+    [self.lblSubtitle setText:[self.promo objectForKey:kPromosAttributeSubtitle]];
+    [self.imgDetail setFile:[self.promo objectForKey:kPromosAttributeLogo]];
+    [self.imgDetail loadInBackground];
+    
 }
 
 - (void)didReceiveMemoryWarning {
