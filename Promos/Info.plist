@@ -7,7 +7,7 @@
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.arf.$(PRODUCT_NAME:rfc1034identifier)</string>
+	<string>com.arf.Promos</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
@@ -18,10 +18,30 @@
 	<string>1.0</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLName</key>
+			<string>com.arf.$(EXECUTABLE_NAME)</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>$(EXECUTABLE_NAME)</string>
+			</array>
+		</dict>
+	</array>
 	<key>CFBundleVersion</key>
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Queremos obtener tu ubicación para darte las mejores ofertas</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Queremos obtener tu ubicación para darte las mejores oftertas 1</string>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>App donwloads content in response to push notifications</string>
+		<string>remote-notification</string>
+	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIRequiredDeviceCapabilities</key>

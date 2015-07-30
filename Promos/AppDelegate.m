@@ -11,6 +11,10 @@
 #import "ARFPromosViewController.h"
 
 #import <Parse/Parse.h>
+#import "UAirship.h"
+#import "UAConfig.h"
+#import "UAPush.h"
+#import "UALocationService.h"
 
 @interface AppDelegate ()
 
@@ -21,9 +25,38 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
+    //Urban Airship
+    [UAConfig defaultConfig];
+
+    //Se da cuenta si estoy en development o release
+    [[UAConfig defaultConfig] setDetectProvisioningMode:YES];
+
+    [[UAConfig defaultConfig] setDevelopmentLogLevel:UALogLevelDebug];
+    
+    [UAirship takeOff];
+    
+    [[UAirship push] setUserPushNotificationsEnabled:YES];
+    [[UAirship push] setUserNotificationTypes:(UIUserNotificationTypeAlert|
+                                              UIUserNotificationTypeBadge|
+                                              UIUserNotificationTypeSound)];
+    
+    NSString *channelID  =[UAirship push].channelID;
+    NSString *deviceToken = [UAirship push].deviceToken;
+    NSLog(@"My channel is: %@ -- My device token is: %@", channelID, deviceToken);
+    
+    
+    
+    [UALocationService setAirshipLocationServiceEnabled:YES];
+    UALocationService *locationService = [UAirship shared].locationService;
+    [locationService setBackgroundLocationServiceEnabled:NO];
+    [locationService startReportingSignificantLocationChanges];
+    
+    
+    
     //Parse Registration
     [Parse setApplicationId:kParseApplicationId
                   clientKey:kParseClientKey];
+    
 
     ARFPromosViewController *promoVC = [[ARFPromosViewController alloc] initWithStyle:UITableViewStylePlain];
     UINavigationController *promosNavVC = [[UINavigationController alloc] initWithRootViewController:promoVC];
@@ -60,6 +93,35 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+-(BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation{
+    
+    
+    NSMutableArray *schemes = [NSMutableArray array];
+    
+    NSArray * bundleURLTypes = [[NSBundle mainBundle].infoDictionary objectForKey:@"CFBundleURLTypes"];
+    [bundleURLTypes enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        [schemes addObjectsFromArray:[bundleURLTypes[idx] objectForKey:@"CFBundleURLSchemes"]];
+    }];
+    
+    if (![schemes containsObject:url.scheme]) {
+        return NO;
+    }
+    
+    [self deepLink:url.pathComponents];
+    
+    return YES;
+}
+
+-(void) deepLink:(NSArray *) path{
+    
+    
+    UITabBarController *rootVC = (UITabBarController *) self.window.rootViewController;
+    
+    [rootVC setSelectedIndex:0];
+    
+    
 }
 
 @end
