@@ -32,6 +32,8 @@ static NSString* const kPromoCellIdentifier        = @"Cell";
     [super viewWillAppear:animated];
     
     [self setTitle:@"Promociones"];
+    
+    [self.tableView reloadData];
 }
 
 - (id)initWithStyle:(UITableViewStyle)style {

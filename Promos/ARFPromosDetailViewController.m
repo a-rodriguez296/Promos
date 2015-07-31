@@ -13,6 +13,7 @@
 #import <ParseUI/ParseUI.h>
 #import <PassKit/PassKit.h>
 
+
 @interface ARFPromosDetailViewController () <PKAddPassesViewControllerDelegate>
 @property (weak, nonatomic) IBOutlet PFImageView *imgDetail;
 @property (weak, nonatomic) IBOutlet UILabel *lblTitle;
