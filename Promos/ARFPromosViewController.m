@@ -10,9 +10,11 @@
 #import "ARFConstants.h"
 #import "ARFPromoCell.h"
 #import "ARFPromosDetailViewController.h"
+#import "ARFBannerView.h"
 
 #import <Parse/Parse.h>
 #import <ParseUI/ParseUI.h>
+#import "PureLayout.h"
 
 static NSString* const kPromoCellIdentifier        = @"Cell";
 
@@ -26,14 +28,31 @@ static NSString* const kPromoCellIdentifier        = @"Cell";
     [super viewDidLoad];
     
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([ARFPromoCell class]) bundle:nil] forCellReuseIdentifier:kPromoCellIdentifier];
+    
+    ARFBannerView *bannerView = [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass([ARFBannerView class]) owner:nil options:nil] firstObject];
+    [bannerView setBackgroundColor:[UIColor blackColor]];
+    [bannerView setTranslatesAutoresizingMaskIntoConstraints:NO];
+    
+//    [bannerView setNeedsLayout];
+//    [bannerView layoutIfNeeded];
+    
+    
+    UIView *view = [[[NSBundle mainBundle] loadNibNamed:@"View" owner:nil options:nil] firstObject];
+    [view setTranslatesAutoresizingMaskIntoConstraints:NO];
+   
+    self.tableView.tableHeaderView = view;
+     [view autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsZero];
+    [view setNeedsLayout];
+    [view layoutIfNeeded];
+
+
 }
 
-- (void)viewWillAppear:(BOOL)animated {
+- (void)viewDidAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     
+
     [self setTitle:@"Promociones"];
-    
-    [self.tableView reloadData];
 }
 
 - (id)initWithStyle:(UITableViewStyle)style {
@@ -92,6 +111,10 @@ static NSString* const kPromoCellIdentifier        = @"Cell";
     
     return query;
 }
+
+
+
+
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath object:(PFObject *)object {
     

@@ -12,6 +12,7 @@ PODS:
     - Bolts/Tasks (>= 1.2.0)
   - ParseUI (1.1.4):
     - Parse (~> 1.7)
+  - PureLayout (2.0.6)
   - UrbanAirship-iOS-SDK/All (6.1.2):
     - UrbanAirship-iOS-SDK/Core
     - UrbanAirship-iOS-SDK/PushUI
@@ -26,6 +27,7 @@ DEPENDENCIES:
   - MTLParseAdapter
   - Parse (~> 1.7.2)
   - ParseUI
+  - PureLayout (~> 2.0.6)
   - UrbanAirship-iOS-SDK/All
 
 SPEC CHECKSUMS:
@@ -35,6 +37,7 @@ SPEC CHECKSUMS:
   MTLParseAdapter: ca4a1df75b4fe332ec618762f43d785f559cae2b
   Parse: 373adbb1ad2e34d383542c3b28f678c49ebe4881
   ParseUI: d1228541b02a36a7354c8f47747f5f7a89cf1ff0
+  PureLayout: f25f0bb904d5ccfe6e31da3cb869185259f02e0d
   UrbanAirship-iOS-SDK: 285cc26d5153a4d5251015653663c593844969b9
 
 COCOAPODS: 0.37.2

@@ -15,11 +15,14 @@
 		9C0C66E91B5F3C420040CF98 /* ARFPromosDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C0C66E71B5F3C420040CF98 /* ARFPromosDetailViewController.xib */; };
 		9C1105651B69B8CD000C32CF /* AirshipConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C1105641B69B8CD000C32CF /* AirshipConfig.plist */; };
 		9C1105681B69D202000C32CF /* ARFBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C1105671B69D202000C32CF /* ARFBaseViewController.m */; };
+		9C48FE3C1B6C38170053D388 /* ARFBannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C48FE3B1B6C38170053D388 /* ARFBannerView.m */; };
+		9C48FE3E1B6C384A0053D388 /* ARFBannerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C48FE3D1B6C384A0053D388 /* ARFBannerView.xib */; };
 		9C64E1B21B5EE3C000645C27 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C64E1B11B5EE3C000645C27 /* main.m */; };
 		9C64E1B51B5EE3C000645C27 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C64E1B41B5EE3C000645C27 /* AppDelegate.m */; };
 		9C64E1BD1B5EE3C000645C27 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C64E1BC1B5EE3C000645C27 /* Images.xcassets */; };
 		9C64E1C01B5EE3C000645C27 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C64E1BE1B5EE3C000645C27 /* LaunchScreen.xib */; };
 		9C64E1CC1B5EE3C000645C27 /* PromosTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C64E1CB1B5EE3C000645C27 /* PromosTests.m */; };
+		9CE05AAB1B6EEABC0071A2B6 /* View.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CE05AAA1B6EEABC0071A2B6 /* View.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +49,9 @@
 		9C1105641B69B8CD000C32CF /* AirshipConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = AirshipConfig.plist; sourceTree = "<group>"; };
 		9C1105661B69D202000C32CF /* ARFBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARFBaseViewController.h; sourceTree = "<group>"; };
 		9C1105671B69D202000C32CF /* ARFBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARFBaseViewController.m; sourceTree = "<group>"; };
+		9C48FE3A1B6C38170053D388 /* ARFBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARFBannerView.h; sourceTree = "<group>"; };
+		9C48FE3B1B6C38170053D388 /* ARFBannerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARFBannerView.m; sourceTree = "<group>"; };
+		9C48FE3D1B6C384A0053D388 /* ARFBannerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ARFBannerView.xib; sourceTree = "<group>"; };
 		9C64E1AC1B5EE3C000645C27 /* Promos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Promos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C64E1B01B5EE3C000645C27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9C64E1B11B5EE3C000645C27 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -56,6 +62,7 @@
 		9C64E1C51B5EE3C000645C27 /* PromosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PromosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C64E1CA1B5EE3C000645C27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9C64E1CB1B5EE3C000645C27 /* PromosTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PromosTests.m; sourceTree = "<group>"; };
+		9CE05AAA1B6EEABC0071A2B6 /* View.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = View.xib; sourceTree = "<group>"; };
 		9F6262D39024010F366E86EA /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		EC9B96D38D16D5ABEA2AAA80 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -116,9 +123,9 @@
 		9C0C66E41B5EEF0D0040CF98 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				9C0C66DF1B5EEF040040CF98 /* ARFPromoCell.h */,
-				9C0C66E01B5EEF040040CF98 /* ARFPromoCell.m */,
-				9C0C66E11B5EEF040040CF98 /* ARFPromoCell.xib */,
+				9C48FE3F1B6C38B90053D388 /* Banner */,
+				9C48FE391B6C37C40053D388 /* Cell */,
+				9CE05AAA1B6EEABC0071A2B6 /* View.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -149,6 +156,26 @@
 				9C1105671B69D202000C32CF /* ARFBaseViewController.m */,
 			);
 			name = Base;
+			sourceTree = "<group>";
+		};
+		9C48FE391B6C37C40053D388 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				9C0C66DF1B5EEF040040CF98 /* ARFPromoCell.h */,
+				9C0C66E01B5EEF040040CF98 /* ARFPromoCell.m */,
+				9C0C66E11B5EEF040040CF98 /* ARFPromoCell.xib */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
+		9C48FE3F1B6C38B90053D388 /* Banner */ = {
+			isa = PBXGroup;
+			children = (
+				9C48FE3A1B6C38170053D388 /* ARFBannerView.h */,
+				9C48FE3B1B6C38170053D388 /* ARFBannerView.m */,
+				9C48FE3D1B6C384A0053D388 /* ARFBannerView.xib */,
+			);
+			name = Banner;
 			sourceTree = "<group>";
 		};
 		9C64E1A31B5EE3C000645C27 = {
@@ -305,10 +332,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CE05AAB1B6EEABC0071A2B6 /* View.xib in Resources */,
 				9C0C66E31B5EEF040040CF98 /* ARFPromoCell.xib in Resources */,
 				9C64E1C01B5EE3C000645C27 /* LaunchScreen.xib in Resources */,
 				9C64E1BD1B5EE3C000645C27 /* Images.xcassets in Resources */,
 				9C1105651B69B8CD000C32CF /* AirshipConfig.plist in Resources */,
+				9C48FE3E1B6C384A0053D388 /* ARFBannerView.xib in Resources */,
 				9C0C66E91B5F3C420040CF98 /* ARFPromosDetailViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -366,6 +395,7 @@
 				9C0C66E21B5EEF040040CF98 /* ARFPromoCell.m in Sources */,
 				9C0C66E81B5F3C420040CF98 /* ARFPromosDetailViewController.m in Sources */,
 				9C1105681B69D202000C32CF /* ARFBaseViewController.m in Sources */,
+				9C48FE3C1B6C38170053D388 /* ARFBannerView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
