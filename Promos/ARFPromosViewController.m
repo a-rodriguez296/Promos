@@ -28,24 +28,25 @@ static NSString* const kPromoCellIdentifier        = @"Cell";
     [super viewDidLoad];
     
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([ARFPromoCell class]) bundle:nil] forCellReuseIdentifier:kPromoCellIdentifier];
-    
-    ARFBannerView *bannerView = [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass([ARFBannerView class]) owner:nil options:nil] firstObject];
-    [bannerView setBackgroundColor:[UIColor blackColor]];
-    [bannerView setTranslatesAutoresizingMaskIntoConstraints:NO];
-    
-//    [bannerView setNeedsLayout];
-//    [bannerView layoutIfNeeded];
-    
-    
-    UIView *view = [[[NSBundle mainBundle] loadNibNamed:@"View" owner:nil options:nil] firstObject];
-    [view setTranslatesAutoresizingMaskIntoConstraints:NO];
-   
-    self.tableView.tableHeaderView = view;
-     [view autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsZero];
-    [view setNeedsLayout];
-    [view layoutIfNeeded];
+//
+//    ARFBannerView *bannerView = [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass([ARFBannerView class]) owner:nil options:nil] firstObject];
+//    [bannerView setBackgroundColor:[UIColor blackColor]];
+//    [bannerView setTranslatesAutoresizingMaskIntoConstraints:NO];
 
-
+    
+    NSLog(@"%@", NSStringFromCGSize(self.view.frame.size));
+    
+    UIView * banner = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width,140)];
+    [banner setTranslatesAutoresizingMaskIntoConstraints:NO];
+    
+    UIScrollView * scroll = [[UIScrollView alloc] initWithFrame:banner.frame];
+    [scroll setBackgroundColor:[UIColor lightGrayColor]];
+    [scroll setTranslatesAutoresizingMaskIntoConstraints:NO];
+    
+    [scroll setContentSize:CGSizeMake(banner.frame.size.width*2, banner.frame.size.height)];
+    
+    [banner addSubview:scroll];
+    [self.tableView setTableHeaderView:banner];
 }
 
 - (void)viewDidAppear:(BOOL)animated{
