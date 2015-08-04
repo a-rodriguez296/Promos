@@ -15,6 +15,10 @@
 		9C0C66E91B5F3C420040CF98 /* ARFPromosDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C0C66E71B5F3C420040CF98 /* ARFPromosDetailViewController.xib */; };
 		9C1105651B69B8CD000C32CF /* AirshipConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C1105641B69B8CD000C32CF /* AirshipConfig.plist */; };
 		9C1105681B69D202000C32CF /* ARFBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C1105671B69D202000C32CF /* ARFBaseViewController.m */; };
+		9C2EC12A1B705E2300811CF8 /* image1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9C2EC1261B705E2300811CF8 /* image1.jpg */; };
+		9C2EC12B1B705E2300811CF8 /* image2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9C2EC1271B705E2300811CF8 /* image2.jpg */; };
+		9C2EC12C1B705E2300811CF8 /* image3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9C2EC1281B705E2300811CF8 /* image3.jpg */; };
+		9C2EC12D1B705E2300811CF8 /* image4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9C2EC1291B705E2300811CF8 /* image4.jpg */; };
 		9C48FE3C1B6C38170053D388 /* ARFBannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C48FE3B1B6C38170053D388 /* ARFBannerView.m */; };
 		9C48FE3E1B6C384A0053D388 /* ARFBannerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C48FE3D1B6C384A0053D388 /* ARFBannerView.xib */; };
 		9C64E1B21B5EE3C000645C27 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C64E1B11B5EE3C000645C27 /* main.m */; };
@@ -48,6 +52,10 @@
 		9C1105641B69B8CD000C32CF /* AirshipConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = AirshipConfig.plist; sourceTree = "<group>"; };
 		9C1105661B69D202000C32CF /* ARFBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARFBaseViewController.h; sourceTree = "<group>"; };
 		9C1105671B69D202000C32CF /* ARFBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARFBaseViewController.m; sourceTree = "<group>"; };
+		9C2EC1261B705E2300811CF8 /* image1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image1.jpg; sourceTree = "<group>"; };
+		9C2EC1271B705E2300811CF8 /* image2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image2.jpg; sourceTree = "<group>"; };
+		9C2EC1281B705E2300811CF8 /* image3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image3.jpg; sourceTree = "<group>"; };
+		9C2EC1291B705E2300811CF8 /* image4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image4.jpg; sourceTree = "<group>"; };
 		9C48FE3A1B6C38170053D388 /* ARFBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARFBannerView.h; sourceTree = "<group>"; };
 		9C48FE3B1B6C38170053D388 /* ARFBannerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARFBannerView.m; sourceTree = "<group>"; };
 		9C48FE3D1B6C384A0053D388 /* ARFBannerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ARFBannerView.xib; sourceTree = "<group>"; };
@@ -198,6 +206,10 @@
 		9C64E1AE1B5EE3C000645C27 /* Promos */ = {
 			isa = PBXGroup;
 			children = (
+				9C2EC1261B705E2300811CF8 /* image1.jpg */,
+				9C2EC1271B705E2300811CF8 /* image2.jpg */,
+				9C2EC1281B705E2300811CF8 /* image3.jpg */,
+				9C2EC1291B705E2300811CF8 /* image4.jpg */,
 				9C0C66E41B5EEF0D0040CF98 /* Views */,
 				9C0C66D61B5EE7C80040CF98 /* Utils */,
 				9C0C66DA1B5EE82B0040CF98 /* Controllers */,
@@ -297,6 +309,7 @@
 				TargetAttributes = {
 					9C64E1AB1B5EE3C000645C27 = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = GTY3SWQ26V;
 					};
 					9C64E1C41B5EE3C000645C27 = {
 						CreatedOnToolsVersion = 6.4;
@@ -329,11 +342,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C2EC12C1B705E2300811CF8 /* image3.jpg in Resources */,
+				9C2EC12A1B705E2300811CF8 /* image1.jpg in Resources */,
 				9C0C66E31B5EEF040040CF98 /* ARFPromoCell.xib in Resources */,
 				9C64E1C01B5EE3C000645C27 /* LaunchScreen.xib in Resources */,
 				9C64E1BD1B5EE3C000645C27 /* Images.xcassets in Resources */,
 				9C1105651B69B8CD000C32CF /* AirshipConfig.plist in Resources */,
+				9C2EC12D1B705E2300811CF8 /* image4.jpg in Resources */,
 				9C48FE3E1B6C384A0053D388 /* ARFBannerView.xib in Resources */,
+				9C2EC12B1B705E2300811CF8 /* image2.jpg in Resources */,
 				9C0C66E91B5F3C420040CF98 /* ARFPromosDetailViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -465,7 +482,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "df40d8ba-3169-4265-bca6-d4f9598295ef";
+				PROVISIONING_PROFILE = "14e49d7b-e2bb-4342-b2fb-a54cdba39917";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -503,7 +520,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PROVISIONING_PROFILE = "df40d8ba-3169-4265-bca6-d4f9598295ef";
+				PROVISIONING_PROFILE = "14e49d7b-e2bb-4342-b2fb-a54cdba39917";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -514,12 +531,13 @@
 			baseConfigurationReference = 42049B0E27E01B487BC04EF2 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Promos/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "df40d8ba-3169-4265-bca6-d4f9598295ef";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -528,12 +546,13 @@
 			baseConfigurationReference = 9F6262D39024010F366E86EA /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Promos/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "df40d8ba-3169-4265-bca6-d4f9598295ef";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

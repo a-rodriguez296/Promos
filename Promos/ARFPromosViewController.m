@@ -36,16 +36,9 @@ static NSString* const kPromoCellIdentifier        = @"Cell";
     
     NSLog(@"%@", NSStringFromCGSize(self.view.frame.size));
     
-    UIView * banner = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width,140)];
-    [banner setTranslatesAutoresizingMaskIntoConstraints:NO];
-    
-    UIScrollView * scroll = [[UIScrollView alloc] initWithFrame:banner.frame];
-    [scroll setBackgroundColor:[UIColor lightGrayColor]];
-    [scroll setTranslatesAutoresizingMaskIntoConstraints:NO];
-    
-    [scroll setContentSize:CGSizeMake(banner.frame.size.width*2, banner.frame.size.height)];
-    
-    [banner addSubview:scroll];
+    ARFBannerView * banner = [[ARFBannerView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width,140)];
+//    [banner setTranslatesAutoresizingMaskIntoConstraints:NO];
+
     [self.tableView setTableHeaderView:banner];
 }
 
