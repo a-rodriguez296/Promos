@@ -102,17 +102,19 @@ static float const kBannerInterval = 3.0;
 -(void)addButtonAtPosition:(NSUInteger) position{
     
     
-    UIView *btn = [[UIView alloc] initWithFrame:CGRectMake(position * self.frame.size.width, 0, self.frame.size.width, self.frame.size.height)];
-//    [btn setBackgroundColor:[UIColor colorWithRed:arc4random_uniform(255)/255.0f green:arc4random_uniform(255)/255.0f blue:arc4random_uniform(255)/255.0f alpha:1.0f]];
+    UIButton *btn = [[UIButton alloc] initWithFrame:CGRectMake(position * self.frame.size.width, 0, self.frame.size.width, self.frame.size.height)];
+    [btn setBackgroundColor:[UIColor colorWithRed:arc4random_uniform(255)/255.0f green:arc4random_uniform(255)/255.0f blue:arc4random_uniform(255)/255.0f alpha:1.0f]];
     if (position==0) {
-        [btn setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"image4.jpg"]]];
+        [btn setImage:[UIImage imageNamed:@"image4.jpg"] forState:UIControlStateNormal];
     }
     else if (position == 5){
-        [btn setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"image1.jpg"]]];
+        [btn setImage:[UIImage imageNamed:@"image1.jpg"] forState:UIControlStateNormal];
     }
     else{
-        [btn setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:[NSString stringWithFormat:@"image%zu.jpg",position]]]];
+        [btn setImage:[UIImage imageNamed:[NSString stringWithFormat:@"image%zu.jpg",position]] forState:UIControlStateNormal];
     }
+    [btn.imageView setContentMode:UIViewContentModeScaleAspectFill];
+    [btn addTarget:self action:@selector(didTapButton:) forControlEvents:UIControlEventTouchUpInside];
     
     [self.scrollView addSubview:btn];
 }
@@ -157,5 +159,16 @@ static float const kBannerInterval = 3.0;
     }
 }
 
+#pragma mark Btn Actions
+
+-(void) didTapButton:(id) sender{
+    
+    //El usuario hizo tap en el botón.
+    
+    if (self.delegate) {
+        [self.delegate ARFBannerView:self didTouchBannerAtIndex:self.currentPosition];
+    }
+    
+}
 
 @end

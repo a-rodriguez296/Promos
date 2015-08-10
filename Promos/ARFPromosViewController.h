@@ -7,7 +7,9 @@
 //
 
 #import "PFQueryTableViewController.h"
+#import "ARFBannerView.h"
 
-@interface ARFPromosViewController : PFQueryTableViewController
+
+@interface ARFPromosViewController : PFQueryTableViewController <ARFBannerDelegate>
 
 @end

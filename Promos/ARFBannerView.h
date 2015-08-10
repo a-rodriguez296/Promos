@@ -8,6 +8,18 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol ARFBannerDelegate;
+
 @interface ARFBannerView : UIView <UIScrollViewDelegate>
+
+@property (nonatomic, weak) id<ARFBannerDelegate> delegate;
+
+@end
+
+
+@protocol ARFBannerDelegate <NSObject>
+
+@required
+-(void) ARFBannerView:(ARFBannerView *) bannerView didTouchBannerAtIndex:(NSUInteger) index;
 
 @end

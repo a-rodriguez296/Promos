@@ -10,7 +10,7 @@
 #import "ARFConstants.h"
 #import "ARFPromoCell.h"
 #import "ARFPromosDetailViewController.h"
-#import "ARFBannerView.h"
+
 
 #import <Parse/Parse.h>
 #import <ParseUI/ParseUI.h>
@@ -28,24 +28,16 @@ static NSString* const kPromoCellIdentifier        = @"Cell";
     [super viewDidLoad];
     
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([ARFPromoCell class]) bundle:nil] forCellReuseIdentifier:kPromoCellIdentifier];
-//
-//    ARFBannerView *bannerView = [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass([ARFBannerView class]) owner:nil options:nil] firstObject];
-//    [bannerView setBackgroundColor:[UIColor blackColor]];
-//    [bannerView setTranslatesAutoresizingMaskIntoConstraints:NO];
 
-    
-    NSLog(@"%@", NSStringFromCGSize(self.view.frame.size));
     
     ARFBannerView * banner = [[ARFBannerView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width,140)];
-//    [banner setTranslatesAutoresizingMaskIntoConstraints:NO];
-
+    [banner setDelegate:self];
+    
     [self.tableView setTableHeaderView:banner];
 }
 
 - (void)viewDidAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    
-
     [self setTitle:@"Promociones"];
 }
 
@@ -56,11 +48,6 @@ static NSString* const kPromoCellIdentifier        = @"Cell";
         
         // The className to query on
         self.parseClassName = kPromosClassName;
-        
-
-        
-        // Uncomment the following line to specify the key of a PFFile on the PFObject to display in the imageView of the default cell style
-        // self.imageKey = @"image";
         
         // Whether the built-in pull-to-refresh is enabled
         self.pullToRefreshEnabled = YES;
@@ -109,7 +96,7 @@ static NSString* const kPromoCellIdentifier        = @"Cell";
 
 
 
-
+#pragma mark UITableViewDelegate
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath object:(PFObject *)object {
     
     ARFPromoCell *cell = (ARFPromoCell *)[tableView dequeueReusableCellWithIdentifier:kPromoCellIdentifier];
@@ -136,4 +123,10 @@ static NSString* const kPromoCellIdentifier        = @"Cell";
     [self.navigationController pushViewController:promoDetailVC animated:YES];
 }
 
+
+#pragma mark ARFBannerDelegate
+
+-(void)ARFBannerView:(ARFBannerView *)bannerView didTouchBannerAtIndex:(NSUInteger)index{
+    NSLog(@"%zd", index);
+}
 @end
