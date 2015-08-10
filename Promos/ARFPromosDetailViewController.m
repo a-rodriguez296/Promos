@@ -12,6 +12,8 @@
 #import <Parse/Parse.h>
 #import <ParseUI/ParseUI.h>
 #import <PassKit/PassKit.h>
+#import <MBProgressHUD/MBProgressHUD.h>
+#import <ReactiveCocoa/ReactiveCocoa.h>
 
 
 @interface ARFPromosDetailViewController () <PKAddPassesViewControllerDelegate>
@@ -61,36 +63,52 @@
 
 - (IBAction)donwloadPass:(id)sender {
     
-    PFFile *pass = [self.promo objectForKey:kPromosAttributePass];
-    [pass getDataInBackgroundWithBlock:^(NSData * result, NSError * error){
-        
-        if (![PKPassLibrary isPassLibraryAvailable]) {
-            [[[UIAlertView alloc] initWithTitle:@"Error"
-                                        message:@"PassKit not available"
-                                       delegate:nil
-                              cancelButtonTitle:@"Pitty"
-                              otherButtonTitles: nil] show];
-            return;
-        }
-        else{
-            
-            NSError* error = nil;
-            PKPass *newPass = [[PKPass alloc] initWithData:result
-                                                     error:&error];
-            PKAddPassesViewController *addController =
-            [[PKAddPassesViewController alloc] initWithPass:newPass];
-            
-            addController.delegate = self;
-            [self presentViewController:addController
-                               animated:YES
-                             completion:nil];
-            
-        }
+    
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    hud.mode = MBProgressHUDModeAnnularDeterminate;
+    hud.labelText = @"Cargando";
+    
+    @weakify(hud,self)
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         
         
-    }progressBlock:^(int percentDone){
-        NSLog(@"%i", percentDone);
-    }];
+        PFFile *pass = [self.promo objectForKey:kPromosAttributePass];
+        [pass getDataInBackgroundWithBlock:^(NSData * result, NSError * error){
+            @strongify(hud,self)
+            [hud hide:YES];
+            
+            
+            if (![PKPassLibrary isPassLibraryAvailable]) {
+                [[[UIAlertView alloc] initWithTitle:@"Error"
+                                            message:@"PassKit not available"
+                                           delegate:nil
+                                  cancelButtonTitle:@"Pitty"
+                                  otherButtonTitles: nil] show];
+                return;
+            }
+            else{
+                
+                NSError* error = nil;
+                PKPass *newPass = [[PKPass alloc] initWithData:result
+                                                         error:&error];
+                PKAddPassesViewController *addController =
+                [[PKAddPassesViewController alloc] initWithPass:newPass];
+                
+                addController.delegate = self;
+                [self presentViewController:addController
+                                   animated:YES
+                                 completion:nil];
+                
+            }
+            
+            
+        }progressBlock:^(int percentDone){
+            @strongify(hud)
+            hud.progress = percentDone;
+        }];
+        
+    });
+    
     
 }
 
