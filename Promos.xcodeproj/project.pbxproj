@@ -103,6 +103,7 @@
 		9C0C66D61B5EE7C80040CF98 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				9C96831D1B7999BE007E33C1 /* Imagenes */,
 				9C0C66D51B5EE79B0040CF98 /* ARFConstants.h */,
 			);
 			name = Utils;
@@ -206,10 +207,6 @@
 		9C64E1AE1B5EE3C000645C27 /* Promos */ = {
 			isa = PBXGroup;
 			children = (
-				9C2EC1261B705E2300811CF8 /* image1.jpg */,
-				9C2EC1271B705E2300811CF8 /* image2.jpg */,
-				9C2EC1281B705E2300811CF8 /* image3.jpg */,
-				9C2EC1291B705E2300811CF8 /* image4.jpg */,
 				9C0C66E41B5EEF0D0040CF98 /* Views */,
 				9C0C66D61B5EE7C80040CF98 /* Utils */,
 				9C0C66DA1B5EE82B0040CF98 /* Controllers */,
@@ -247,6 +244,17 @@
 				9C64E1CA1B5EE3C000645C27 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9C96831D1B7999BE007E33C1 /* Imagenes */ = {
+			isa = PBXGroup;
+			children = (
+				9C2EC1261B705E2300811CF8 /* image1.jpg */,
+				9C2EC1271B705E2300811CF8 /* image2.jpg */,
+				9C2EC1281B705E2300811CF8 /* image3.jpg */,
+				9C2EC1291B705E2300811CF8 /* image4.jpg */,
+			);
+			name = Imagenes;
 			sourceTree = "<group>";
 		};
 		B78A798E2E1119E329D3A4D5 /* Pods */ = {

@@ -10,7 +10,7 @@
 #import "ARFConstants.h"
 
 #import "PureLayout.h"
-#import <ParseUI/ParseUI.h>
+
 
 static NSUInteger const kNumberBannerAds = 4;
 static float const kBannerInterval = 3.0;
@@ -115,22 +115,32 @@ static float const kBannerInterval = 3.0;
     PFFile *imageFile;
     
     PFImageView *imageView = [[PFImageView alloc] initWithFrame:CGRectMake(position * self.frame.size.width, 0, self.frame.size.width, self.frame.size.height)];
-
+    [imageView setUserInteractionEnabled:YES];
     
+    //En la primera posición se debe poner la última foto
     if (position==0) {
         imageFile = [self.bannerObjects[3] objectForKey:kPromosAttributeFeaturedImage];
     }
+    //En la última posición se debe poner la primera foto
     else if (position == 5){
         imageFile = [self.bannerObjects[0] objectForKey:kPromosAttributeFeaturedImage];
     }
+    //El resto de posiciones se comportan normalmente. El -1 es porque la "primera" posición es 0
     else{
         imageFile = [self.bannerObjects[position-1] objectForKey:kPromosAttributeFeaturedImage];
         
     }
     
+    
+    UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(imageTapped:)];
+    [tapGesture setNumberOfTapsRequired:1];
+    [imageView addGestureRecognizer:tapGesture];
+    
     [imageView setFile:imageFile];
     [imageView loadInBackground];
-//    [btn addTarget:self action:@selector(didTapButton:) forControlEvents:UIControlEventTouchUpInside];
+    
+    
+    
     
     [self.scrollView addSubview:imageView];
 }
@@ -177,14 +187,13 @@ static float const kBannerInterval = 3.0;
 
 #pragma mark Btn Actions
 
--(void) didTapButton:(id) sender{
+-(void) imageTapped:(id) sender{
     
     //El usuario hizo tap en el botón.
     
     if (self.delegate) {
-        [self.delegate ARFBannerView:self didTouchBannerAtIndex:self.currentPosition];
+        [self.delegate ARFBannerView:self didTouchBannerAtIndex:self.currentPosition-1 object:self.bannerObjects[self.currentPosition-1]];
     }
-    
 }
 
 @end

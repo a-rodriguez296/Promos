@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+#import <ParseUI/ParseUI.h>
+
 @protocol ARFBannerDelegate;
 
 @interface ARFBannerView : UIView <UIScrollViewDelegate>
@@ -23,6 +25,6 @@
 @protocol ARFBannerDelegate <NSObject>
 
 @required
--(void) ARFBannerView:(ARFBannerView *) bannerView didTouchBannerAtIndex:(NSUInteger) index;
+-(void) ARFBannerView:(ARFBannerView *) bannerView didTouchBannerAtIndex:(NSUInteger) index object:(PFObject *) object;
 
 @end

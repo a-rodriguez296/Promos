@@ -140,15 +140,22 @@ static NSString* const kPromoCellIdentifier        = @"Cell";
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
     PFObject *promo = [self objectAtIndex:indexPath];
-    
-    ARFPromosDetailViewController *promoDetailVC = [[ARFPromosDetailViewController alloc] initWithPromo:promo];
-    [self.navigationController pushViewController:promoDetailVC animated:YES];
+    [self pushToDetailWithObject:promo];
 }
 
 
 #pragma mark ARFBannerDelegate
 
--(void)ARFBannerView:(ARFBannerView *)bannerView didTouchBannerAtIndex:(NSUInteger)index{
-    NSLog(@"%zd", index);
+-(void)ARFBannerView:(ARFBannerView *)bannerView didTouchBannerAtIndex:(NSUInteger)index object:(PFObject *)object{
+    [self pushToDetailWithObject:object];
+}
+
+
+#pragma mark Utils
+
+-(void) pushToDetailWithObject:(PFObject *) object{
+    
+    ARFPromosDetailViewController *promoDetailVC = [[ARFPromosDetailViewController alloc] initWithPromo:object];
+    [self.navigationController pushViewController:promoDetailVC animated:YES];
 }
 @end
