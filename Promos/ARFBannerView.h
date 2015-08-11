@@ -14,6 +14,9 @@
 
 @property (nonatomic, weak) id<ARFBannerDelegate> delegate;
 
+-(id) initWithFrame:(CGRect)frame objects:(NSArray *) objects;
+
+
 @end
 
 

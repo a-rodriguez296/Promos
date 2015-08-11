@@ -15,6 +15,7 @@
 #import <Parse/Parse.h>
 #import <ParseUI/ParseUI.h>
 #import "PureLayout.h"
+#import <ReactiveCocoa/ReactiveCocoa.h>
 
 static NSString* const kPromoCellIdentifier        = @"Cell";
 
@@ -29,11 +30,25 @@ static NSString* const kPromoCellIdentifier        = @"Cell";
     
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([ARFPromoCell class]) bundle:nil] forCellReuseIdentifier:kPromoCellIdentifier];
 
+    @weakify(self);
     
-    ARFBannerView * banner = [[ARFBannerView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width,140)];
-    [banner setDelegate:self];
-    
-    [self.tableView setTableHeaderView:banner];
+    PFQuery *featuredQuery = [PFQuery queryWithClassName:self.parseClassName];
+    [featuredQuery whereKey:kPromosAttributeFeatured equalTo:@YES];
+    [featuredQuery setLimit:4];
+    [featuredQuery setCachePolicy:kPFCachePolicyCacheElseNetwork];
+    [featuredQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        @strongify(self);
+        if (!error) {
+            
+            ARFBannerView * banner = [[ARFBannerView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width,140) objects:objects];
+            [banner setDelegate:self];
+            
+            [self.tableView setTableHeaderView:banner];
+            
+        } else {
+            
+        }
+    }];
 }
 
 - (void)viewDidAppear:(BOOL)animated{
@@ -76,7 +91,14 @@ static NSString* const kPromoCellIdentifier        = @"Cell";
 }
 
 - (PFQuery *)queryForTable {
+    
+    
     PFQuery *query = [PFQuery queryWithClassName:self.parseClassName];
+    
+    
+    
+    
+    
     
     // If Pull To Refresh is enabled, query against the network by default.
     if (self.pullToRefreshEnabled) {

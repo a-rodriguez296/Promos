@@ -7,9 +7,10 @@
 //
 
 #import "ARFBannerView.h"
+#import "ARFConstants.h"
 
 #import "PureLayout.h"
-#include <stdlib.h>
+#import <ParseUI/ParseUI.h>
 
 static NSUInteger const kNumberBannerAds = 4;
 static float const kBannerInterval = 3.0;
@@ -18,8 +19,15 @@ static float const kBannerInterval = 3.0;
 
 //@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 
+
 @property (nonatomic, copy) UIScrollView *scrollView;
+
+
+@property(nonatomic, copy) NSArray * bannerObjects;
 @property (nonatomic, assign) NSUInteger currentPosition;
+
+
+
 
 
 @end
@@ -27,9 +35,11 @@ static float const kBannerInterval = 3.0;
 @implementation ARFBannerView
 
 
--(instancetype)initWithFrame:(CGRect)frame{
+-(id) initWithFrame:(CGRect)frame objects:(NSArray *) objects;{
     
     if (self = [super initWithFrame:frame]) {
+        
+        _bannerObjects = objects;
         
         //Crear scrollView
         [self createScrollView];
@@ -102,21 +112,27 @@ static float const kBannerInterval = 3.0;
 -(void)addButtonAtPosition:(NSUInteger) position{
     
     
-    UIButton *btn = [[UIButton alloc] initWithFrame:CGRectMake(position * self.frame.size.width, 0, self.frame.size.width, self.frame.size.height)];
-    [btn setBackgroundColor:[UIColor colorWithRed:arc4random_uniform(255)/255.0f green:arc4random_uniform(255)/255.0f blue:arc4random_uniform(255)/255.0f alpha:1.0f]];
+    PFFile *imageFile;
+    
+    PFImageView *imageView = [[PFImageView alloc] initWithFrame:CGRectMake(position * self.frame.size.width, 0, self.frame.size.width, self.frame.size.height)];
+
+    
     if (position==0) {
-        [btn setImage:[UIImage imageNamed:@"image4.jpg"] forState:UIControlStateNormal];
+        imageFile = [self.bannerObjects[3] objectForKey:kPromosAttributeFeaturedImage];
     }
     else if (position == 5){
-        [btn setImage:[UIImage imageNamed:@"image1.jpg"] forState:UIControlStateNormal];
+        imageFile = [self.bannerObjects[0] objectForKey:kPromosAttributeFeaturedImage];
     }
     else{
-        [btn setImage:[UIImage imageNamed:[NSString stringWithFormat:@"image%zu.jpg",position]] forState:UIControlStateNormal];
+        imageFile = [self.bannerObjects[position-1] objectForKey:kPromosAttributeFeaturedImage];
+        
     }
-    [btn.imageView setContentMode:UIViewContentModeScaleAspectFill];
-    [btn addTarget:self action:@selector(didTapButton:) forControlEvents:UIControlEventTouchUpInside];
     
-    [self.scrollView addSubview:btn];
+    [imageView setFile:imageFile];
+    [imageView loadInBackground];
+//    [btn addTarget:self action:@selector(didTapButton:) forControlEvents:UIControlEventTouchUpInside];
+    
+    [self.scrollView addSubview:imageView];
 }
 
 
