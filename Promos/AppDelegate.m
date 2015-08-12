@@ -13,12 +13,15 @@
 #import "ARFCommerceViewController.h"
 
 #import <Parse/Parse.h>
+#import "UAPushNotificationHandler.h"
 #import "UAirship.h"
 #import "UAConfig.h"
 #import "UAPush.h"
 #import "UALocationService.h"
 
 @interface AppDelegate ()
+
+@property (nonatomic, strong) UAPushNotificationHandler *pushHandler;
 
 @end
 
@@ -42,10 +45,13 @@
                                               UIUserNotificationTypeBadge|
                                               UIUserNotificationTypeSound)];
     
+    
+    self.pushHandler = [[UAPushNotificationHandler alloc] init];
+    [UAirship push].pushNotificationDelegate = self.pushHandler;
+    
     NSString *channelID  =[UAirship push].channelID;
     NSString *deviceToken = [UAirship push].deviceToken;
     NSLog(@"My channel is: %@ -- My device token is: %@", channelID, deviceToken);
-    
     
     
     [UALocationService setAirshipLocationServiceEnabled:YES];
@@ -67,6 +73,8 @@
     return YES;
 }
 
+
+
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
@@ -83,6 +91,9 @@
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    
+    [[UAirship push] resetBadge];
+    
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {
@@ -91,6 +102,17 @@
 
 
 #pragma mark Push Notifications & Deep Link
+-(void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo{
+    [[UAirship push] resetBadge];
+}
+
+
+-(void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler{
+    
+    
+    completionHandler(UIBackgroundFetchResultNoData);
+}
+
 -(BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation{
     
     

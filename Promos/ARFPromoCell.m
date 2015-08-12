@@ -40,4 +40,10 @@
     [self.imagePromo loadInBackground];
 }
 
+-(void)layoutSubviews
+{
+    [super layoutSubviews];
+    [self layoutIfNeeded]; // this line is key
+}
+
 @end

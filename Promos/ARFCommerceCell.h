@@ -2,7 +2,7 @@
 //  ARFCommerceCell.h
 //  Promos
 //
-//  Created by Alejandro Rodriguez on 8/11/15.
+//  Created by Alejandro Rodriguez on 8/14/15.
 //  Copyright (c) 2015 Alejandro Rodriguez. All rights reserved.
 //
 
@@ -15,5 +15,6 @@
 
 
 -(void) configureCellWithPFObject:(PFObject *) object;
+
 
 @end

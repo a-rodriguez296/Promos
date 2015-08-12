@@ -9,14 +9,18 @@
 #import "ARFCommerceViewController.h"
 #import "ARFConstants.h"
 #import "ARFCommerceCell.h"
+#import "ARFCommerceBanner.h"
 
 #import <Parse/Parse.h>
 #import <ParseUI/ParseUI.h>
+#import "PureLayout.h"
 
-static NSString* const kCommerceCellIdentifier        = @"Cell";
+static NSString* const kCommerceCellIdentifier        = @"CommerceCell";
 
 
 @interface ARFCommerceViewController ()
+
+@property (nonatomic, strong) ARFCommerceBanner *commerceBanner;
 
 @end
 
@@ -28,12 +32,40 @@ static NSString* const kCommerceCellIdentifier        = @"Cell";
     
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([ARFCommerceCell class]) bundle:nil] forCellReuseIdentifier:kCommerceCellIdentifier];
     
+    self.commerceBanner = [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass([ARFCommerceBanner class]) owner:self options:nil] firstObject];
+    [self.commerceBanner setBackgroundColor:[UIColor greenColor]];
+    [self.tableView setTableHeaderView:self.commerceBanner];
+
+    
 }
 
-- (void)viewDidAppear:(BOOL)animated{
+-(void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    
+    [self.commerceBanner setFrame:CGRectMake(0, 0, self.view.frame.size.width, 124)];
+    [self.commerceBanner layoutSubviews];
+}
+
+
+- (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     [self setTitle:@"Marcas"];
+
 }
+
+//-(void)updateViewConstraints{
+//    
+//    [self.commerceBanner autoSetDimension:ALDimensionWidth toSize:self.view.frame.size.width];
+//    [self.commerceBanner autoSetDimension:ALDimensionHeight toSize:124];
+//    [self.commerceBanner autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsZero];
+//    [super updateViewConstraints];
+//}
+
+
+//-(void)viewDidLayoutSubviews{
+//    [super viewDidLayoutSubviews];
+//    [self.view layoutIfNeeded];
+//}
 
 
 #pragma mark - PFQueryTableViewController
@@ -97,15 +129,12 @@ static NSString* const kCommerceCellIdentifier        = @"Cell";
     ARFCommerceCell *cell = (ARFCommerceCell *)[tableView dequeueReusableCellWithIdentifier:kCommerceCellIdentifier];
     
     [cell configureCellWithPFObject:object];
+    
     return cell;
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 55;
-}
-
-- (PFObject *)objectAtIndex:(NSIndexPath *)indexPath {
-    return [self.objects objectAtIndex:indexPath.row];
 }
 
 @end

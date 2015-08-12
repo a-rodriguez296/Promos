@@ -32,7 +32,7 @@
             <connections>
                 <outlet property="scrollView" destination="IYG-5x-0KL" id="2Nu-C3-obw"/>
             </connections>
-            <point key="canvasLocation" x="412" y="161"/>
+            <point key="canvasLocation" x="411.5" y="161"/>
         </view>
     </objects>
 </document>
