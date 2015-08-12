@@ -26,6 +26,9 @@
 		9C64E1BD1B5EE3C000645C27 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C64E1BC1B5EE3C000645C27 /* Images.xcassets */; };
 		9C64E1C01B5EE3C000645C27 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C64E1BE1B5EE3C000645C27 /* LaunchScreen.xib */; };
 		9C64E1CC1B5EE3C000645C27 /* PromosTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C64E1CB1B5EE3C000645C27 /* PromosTests.m */; };
+		9CCCDF1F1B7ABD26009FE8AB /* ARFCommerceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CCCDF1E1B7ABD26009FE8AB /* ARFCommerceViewController.m */; };
+		9CCCDF241B7ABF05009FE8AB /* ARFCommerceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CCCDF221B7ABF05009FE8AB /* ARFCommerceCell.m */; };
+		9CCCDF251B7ABF05009FE8AB /* ARFCommerceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CCCDF231B7ABF05009FE8AB /* ARFCommerceCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +72,11 @@
 		9C64E1C51B5EE3C000645C27 /* PromosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PromosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C64E1CA1B5EE3C000645C27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9C64E1CB1B5EE3C000645C27 /* PromosTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PromosTests.m; sourceTree = "<group>"; };
+		9CCCDF1D1B7ABD26009FE8AB /* ARFCommerceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARFCommerceViewController.h; sourceTree = "<group>"; };
+		9CCCDF1E1B7ABD26009FE8AB /* ARFCommerceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARFCommerceViewController.m; sourceTree = "<group>"; };
+		9CCCDF211B7ABF05009FE8AB /* ARFCommerceCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARFCommerceCell.h; sourceTree = "<group>"; };
+		9CCCDF221B7ABF05009FE8AB /* ARFCommerceCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARFCommerceCell.m; sourceTree = "<group>"; };
+		9CCCDF231B7ABF05009FE8AB /* ARFCommerceCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ARFCommerceCell.xib; sourceTree = "<group>"; };
 		9F6262D39024010F366E86EA /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		EC9B96D38D16D5ABEA2AAA80 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -113,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				9C0C66DB1B5EE8460040CF98 /* Promos */,
+				9CCCDF271B7AC1EB009FE8AB /* Commerce */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -131,7 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				9C48FE3F1B6C38B90053D388 /* Banner */,
-				9C48FE391B6C37C40053D388 /* Cell */,
+				9C48FE391B6C37C40053D388 /* Cells */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -164,14 +173,13 @@
 			name = Base;
 			sourceTree = "<group>";
 		};
-		9C48FE391B6C37C40053D388 /* Cell */ = {
+		9C48FE391B6C37C40053D388 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				9C0C66DF1B5EEF040040CF98 /* ARFPromoCell.h */,
-				9C0C66E01B5EEF040040CF98 /* ARFPromoCell.m */,
-				9C0C66E11B5EEF040040CF98 /* ARFPromoCell.xib */,
+				9CCCDF201B7ABEDC009FE8AB /* Promo Cell */,
+				9CCCDF261B7AC1DC009FE8AB /* CommerceCell */,
 			);
-			name = Cell;
+			name = Cells;
 			sourceTree = "<group>";
 		};
 		9C48FE3F1B6C38B90053D388 /* Banner */ = {
@@ -255,6 +263,35 @@
 				9C2EC1291B705E2300811CF8 /* image4.jpg */,
 			);
 			name = Imagenes;
+			sourceTree = "<group>";
+		};
+		9CCCDF201B7ABEDC009FE8AB /* Promo Cell */ = {
+			isa = PBXGroup;
+			children = (
+				9C0C66DF1B5EEF040040CF98 /* ARFPromoCell.h */,
+				9C0C66E01B5EEF040040CF98 /* ARFPromoCell.m */,
+				9C0C66E11B5EEF040040CF98 /* ARFPromoCell.xib */,
+			);
+			name = "Promo Cell";
+			sourceTree = "<group>";
+		};
+		9CCCDF261B7AC1DC009FE8AB /* CommerceCell */ = {
+			isa = PBXGroup;
+			children = (
+				9CCCDF211B7ABF05009FE8AB /* ARFCommerceCell.h */,
+				9CCCDF221B7ABF05009FE8AB /* ARFCommerceCell.m */,
+				9CCCDF231B7ABF05009FE8AB /* ARFCommerceCell.xib */,
+			);
+			name = CommerceCell;
+			sourceTree = "<group>";
+		};
+		9CCCDF271B7AC1EB009FE8AB /* Commerce */ = {
+			isa = PBXGroup;
+			children = (
+				9CCCDF1D1B7ABD26009FE8AB /* ARFCommerceViewController.h */,
+				9CCCDF1E1B7ABD26009FE8AB /* ARFCommerceViewController.m */,
+			);
+			name = Commerce;
 			sourceTree = "<group>";
 		};
 		B78A798E2E1119E329D3A4D5 /* Pods */ = {
@@ -355,6 +392,7 @@
 				9C0C66E31B5EEF040040CF98 /* ARFPromoCell.xib in Resources */,
 				9C64E1C01B5EE3C000645C27 /* LaunchScreen.xib in Resources */,
 				9C64E1BD1B5EE3C000645C27 /* Images.xcassets in Resources */,
+				9CCCDF251B7ABF05009FE8AB /* ARFCommerceCell.xib in Resources */,
 				9C1105651B69B8CD000C32CF /* AirshipConfig.plist in Resources */,
 				9C2EC12D1B705E2300811CF8 /* image4.jpg in Resources */,
 				9C48FE3E1B6C384A0053D388 /* ARFBannerView.xib in Resources */,
@@ -413,6 +451,8 @@
 				9C0C66DE1B5EE8670040CF98 /* ARFPromosViewController.m in Sources */,
 				9C64E1B51B5EE3C000645C27 /* AppDelegate.m in Sources */,
 				9C64E1B21B5EE3C000645C27 /* main.m in Sources */,
+				9CCCDF241B7ABF05009FE8AB /* ARFCommerceCell.m in Sources */,
+				9CCCDF1F1B7ABD26009FE8AB /* ARFCommerceViewController.m in Sources */,
 				9C0C66E21B5EEF040040CF98 /* ARFPromoCell.m in Sources */,
 				9C0C66E81B5F3C420040CF98 /* ARFPromosDetailViewController.m in Sources */,
 				9C1105681B69D202000C32CF /* ARFBaseViewController.m in Sources */,

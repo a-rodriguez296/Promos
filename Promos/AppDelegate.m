@@ -10,6 +10,7 @@
 #import "ARFConstants.h"
 #import "ARFPromosViewController.h"
 #import "ARFPromosDetailViewController.h"
+#import "ARFCommerceViewController.h"
 
 #import <Parse/Parse.h>
 #import "UAirship.h"
@@ -52,23 +53,13 @@
     [locationService setBackgroundLocationServiceEnabled:NO];
     [locationService startReportingSignificantLocationChanges];
     
-    
-    
-    
-    
+
     //Parse Registration
     [Parse setApplicationId:kParseApplicationId
                   clientKey:kParseClientKey];
     
-
-    ARFPromosViewController *promoVC = [[ARFPromosViewController alloc] initWithStyle:UITableViewStylePlain];
-    UINavigationController *promosNavVC = [[UINavigationController alloc] initWithRootViewController:promoVC];
-    
-    UITabBarController *tabBC = [[UITabBarController alloc] init];
-    [tabBC setViewControllers:@[promosNavVC]];
-    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    self.window.rootViewController = tabBC;
+    self.window.rootViewController = [self configureRootViewController];
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     
@@ -98,6 +89,8 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+
+#pragma mark Push Notifications & Deep Link
 -(BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation{
     
     
@@ -138,5 +131,31 @@
         }
     }];
 }
+
+
+#pragma mark Utils
+
+-(UIViewController *) configureRootViewController{
+    
+    
+    //Promos
+    ARFPromosViewController *promoVC = [[ARFPromosViewController alloc] initWithStyle:UITableViewStylePlain];
+    [promoVC setTitle:@"Promociones"];
+    UINavigationController *promosNavVC = [[UINavigationController alloc] initWithRootViewController:promoVC];
+    
+    
+    //Commerce
+    ARFCommerceViewController *commerceVC = [[ARFCommerceViewController alloc] initWithStyle:UITableViewStylePlain];
+    [commerceVC setTitle:@"Marcas"];
+    UINavigationController *commerceNavVC = [[UINavigationController alloc] initWithRootViewController:commerceVC];
+    
+    
+    
+    UITabBarController *tabBC = [[UITabBarController alloc] init];
+    [tabBC setViewControllers:@[promosNavVC, commerceNavVC]];
+    
+    return tabBC;
+}
+
 
 @end

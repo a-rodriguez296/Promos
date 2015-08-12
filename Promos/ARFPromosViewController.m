@@ -94,11 +94,7 @@ static NSString* const kPromoCellIdentifier        = @"Cell";
     
     
     PFQuery *query = [PFQuery queryWithClassName:self.parseClassName];
-    
-    
-    
-    
-    
+
     
     // If Pull To Refresh is enabled, query against the network by default.
     if (self.pullToRefreshEnabled) {

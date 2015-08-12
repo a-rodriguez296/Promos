@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="55" id="KGk-i7-Jjw" customClass="ARFCommerceCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="LNK-El-tNq">
+                        <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="231" id="wI0-re-edv"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="wI0-re-edv"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="wI0-re-edv"/>
+                            </mask>
+                        </variation>
+                    </label>
+                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Veu-jj-y56">
+                        <rect key="frame" x="-25" y="-15" width="51" height="31"/>
+                    </switch>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="centerY" secondItem="LNK-El-tNq" secondAttribute="centerY" id="3Xs-np-Mb7"/>
+                    <constraint firstAttribute="trailing" secondItem="Veu-jj-y56" secondAttribute="trailing" constant="8" id="GHU-M7-TQn"/>
+                    <constraint firstAttribute="trailing" secondItem="Veu-jj-y56" secondAttribute="trailing" constant="8" id="c03-jR-PHx"/>
+                    <constraint firstItem="Veu-jj-y56" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="6" id="dWz-hG-sbW"/>
+                    <constraint firstItem="LNK-El-tNq" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="fP0-MR-nya"/>
+                    <constraint firstItem="Veu-jj-y56" firstAttribute="centerY" secondItem="LNK-El-tNq" secondAttribute="centerY" id="kJ4-Xi-4Iw"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="subviews">
+                        <exclude reference="LNK-El-tNq"/>
+                        <exclude reference="Veu-jj-y56"/>
+                    </mask>
+                    <mask key="constraints">
+                        <exclude reference="3Xs-np-Mb7"/>
+                        <exclude reference="fP0-MR-nya"/>
+                        <exclude reference="GHU-M7-TQn"/>
+                        <exclude reference="c03-jR-PHx"/>
+                        <exclude reference="dWz-hG-sbW"/>
+                        <exclude reference="kJ4-Xi-4Iw"/>
+                    </mask>
+                </variation>
+                <variation key="heightClass=regular-widthClass=compact">
+                    <mask key="subviews">
+                        <include reference="LNK-El-tNq"/>
+                        <include reference="Veu-jj-y56"/>
+                    </mask>
+                    <mask key="constraints">
+                        <include reference="3Xs-np-Mb7"/>
+                        <include reference="fP0-MR-nya"/>
+                        <exclude reference="GHU-M7-TQn"/>
+                        <include reference="c03-jR-PHx"/>
+                        <exclude reference="dWz-hG-sbW"/>
+                        <include reference="kJ4-Xi-4Iw"/>
+                    </mask>
+                </variation>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="lblCommerceName" destination="LNK-El-tNq" id="jMM-Ek-HsX"/>
+                <outlet property="switchNotifications" destination="Veu-jj-y56" id="4Iz-0d-cIR"/>
+            </connections>
+            <point key="canvasLocation" x="412" y="246.5"/>
+        </tableViewCell>
+    </objects>
+</document>
