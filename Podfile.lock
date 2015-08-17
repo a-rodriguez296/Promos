@@ -1,6 +1,7 @@
 PODS:
   - Asterism (1.0.0)
   - Bolts/Tasks (1.2.0)
+  - iCarousel (1.8.2)
   - Mantle (1.5.5):
     - Mantle/extobjc (= 1.5.5)
   - Mantle/extobjc (1.5.5)
@@ -21,17 +22,18 @@ PODS:
   - ReactiveCocoa/no-arc (2.5)
   - ReactiveCocoa/UI (2.5):
     - ReactiveCocoa/Core
-  - UrbanAirship-iOS-SDK/All (6.1.3):
+  - UrbanAirship-iOS-SDK/All (6.1.4):
     - UrbanAirship-iOS-SDK/Core
     - UrbanAirship-iOS-SDK/PushUI
     - UrbanAirship-iOS-SDK/RichPushUI
-  - UrbanAirship-iOS-SDK/Core (6.1.3)
-  - UrbanAirship-iOS-SDK/PushUI (6.1.3):
+  - UrbanAirship-iOS-SDK/Core (6.1.4)
+  - UrbanAirship-iOS-SDK/PushUI (6.1.4):
     - UrbanAirship-iOS-SDK/Core
-  - UrbanAirship-iOS-SDK/RichPushUI (6.1.3):
+  - UrbanAirship-iOS-SDK/RichPushUI (6.1.4):
     - UrbanAirship-iOS-SDK/Core
 
 DEPENDENCIES:
+  - iCarousel
   - MBProgressHUD (~> 0.9.1)
   - MTLParseAdapter
   - Parse (~> 1.7.2)
@@ -43,6 +45,7 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   Asterism: b2992aaf4ac2dbc66c3aea3a6412c67e3e689835
   Bolts: d176cb1e0012175589e389a9db49b85e27787576
+  iCarousel: 67c8a43da5a46795b56aadfc96cd36a16f6149b2
   Mantle: 1b29072a707453975b200a173cf77ec1e2810b75
   MBProgressHUD: c47f2c166c126cf2ce36498d80f33e754d4e93ad
   MTLParseAdapter: ca4a1df75b4fe332ec618762f43d785f559cae2b
@@ -50,6 +53,6 @@ SPEC CHECKSUMS:
   ParseUI: d1228541b02a36a7354c8f47747f5f7a89cf1ff0
   PureLayout: f25f0bb904d5ccfe6e31da3cb869185259f02e0d
   ReactiveCocoa: e2db045570aa97c695e7aa97c2bcab222ae51f4a
-  UrbanAirship-iOS-SDK: 8a3274d50c979502f8374cd5ab4cbb9f9f7b75ae
+  UrbanAirship-iOS-SDK: bf2792b2c1367deaa4d0fe89370f97c8985efa83
 
 COCOAPODS: 0.37.2

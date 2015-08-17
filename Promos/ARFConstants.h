@@ -39,3 +39,8 @@ static NSString* const kAttributeCreatedAt        = @"cratedAt";
 
 #pragma mark Animación
 static float const kAnimationConstant = 0.5;
+
+//Promos Banner
+static float const kPromosBannerAnimationConstant = 3.0;
+static float const kPromosBannerScrollTimeConstant = 0.6;
+

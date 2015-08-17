@@ -10,7 +10,7 @@
 #import "ARFConstants.h"
 #import "ARFPromoCell.h"
 #import "ARFPromosDetailViewController.h"
-
+#import "ARFPromosBannerView.h"
 
 #import <Parse/Parse.h>
 #import <ParseUI/ParseUI.h>
@@ -21,6 +21,9 @@ static NSString* const kPromoCellIdentifier        = @"Cell";
 
 @interface ARFPromosViewController ()
 
+@property (nonatomic, strong) ARFPromosBannerView * promosBanner;
+
+
 @end
 
 @implementation ARFPromosViewController
@@ -30,30 +33,42 @@ static NSString* const kPromoCellIdentifier        = @"Cell";
     
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([ARFPromoCell class]) bundle:nil] forCellReuseIdentifier:kPromoCellIdentifier];
 
-    @weakify(self);
+    //Se agregó el header
+    self.promosBanner = [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass([ARFPromosBannerView class]) owner:self options:nil] firstObject];
+    [self.promosBanner setDelegate:self];
+    [self.tableView setTableHeaderView:self.promosBanner];
     
-    PFQuery *featuredQuery = [PFQuery queryWithClassName:self.parseClassName];
-    [featuredQuery whereKey:kPromosAttributeFeatured equalTo:@YES];
-    [featuredQuery setLimit:4];
-    [featuredQuery setCachePolicy:kPFCachePolicyCacheElseNetwork];
-    [featuredQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-        @strongify(self);
-        if (!error) {
-            
-            ARFBannerView * banner = [[ARFBannerView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width,140) objects:objects];
-            [banner setDelegate:self];
-            
-            [self.tableView setTableHeaderView:banner];
-            
-        } else {
-            
-        }
-    }];
 }
 
 - (void)viewDidAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     [self setTitle:@"Promociones"];
+    
+   
+    
+    
+    @weakify(self);
+    
+    PFQuery *featuredQuery = [PFQuery queryWithClassName:self.parseClassName];
+    [featuredQuery whereKey:kPromosAttributeFeatured equalTo:[NSNumber numberWithBool:YES]];
+    [featuredQuery setLimit:3];
+    [featuredQuery setCachePolicy:kPFCachePolicyCacheThenNetwork];
+    [featuredQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        @strongify(self);
+        if (!error) {
+            
+            [self.promosBanner setObjects:objects];
+            
+            
+        } else {
+            
+        }
+    }];
+
+    
+    //Setup autolayout del header
+    [self.promosBanner setFrame:CGRectMake(0, 0, self.view.frame.size.width, 120)];
+    [self.promosBanner layoutSubviews];
 }
 
 - (id)initWithStyle:(UITableViewStyle)style {
@@ -142,7 +157,7 @@ static NSString* const kPromoCellIdentifier        = @"Cell";
 
 #pragma mark ARFBannerDelegate
 
--(void)ARFBannerView:(ARFBannerView *)bannerView didTouchBannerAtIndex:(NSUInteger)index object:(PFObject *)object{
+-(void)ARFBannerView:(ARFPromosBannerView *)bannerView didTouchBannerAtIndex:(NSUInteger)index object:(PFObject *)object{
     [self pushToDetailWithObject:object];
 }
 

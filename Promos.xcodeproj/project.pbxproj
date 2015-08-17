@@ -19,16 +19,19 @@
 		9C2EC12B1B705E2300811CF8 /* image2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9C2EC1271B705E2300811CF8 /* image2.jpg */; };
 		9C2EC12C1B705E2300811CF8 /* image3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9C2EC1281B705E2300811CF8 /* image3.jpg */; };
 		9C2EC12D1B705E2300811CF8 /* image4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9C2EC1291B705E2300811CF8 /* image4.jpg */; };
-		9C48FE3C1B6C38170053D388 /* ARFBannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C48FE3B1B6C38170053D388 /* ARFBannerView.m */; };
-		9C48FE3E1B6C384A0053D388 /* ARFBannerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C48FE3D1B6C384A0053D388 /* ARFBannerView.xib */; };
 		9C64E1B21B5EE3C000645C27 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C64E1B11B5EE3C000645C27 /* main.m */; };
 		9C64E1B51B5EE3C000645C27 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C64E1B41B5EE3C000645C27 /* AppDelegate.m */; };
 		9C64E1BD1B5EE3C000645C27 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C64E1BC1B5EE3C000645C27 /* Images.xcassets */; };
 		9C64E1C01B5EE3C000645C27 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C64E1BE1B5EE3C000645C27 /* LaunchScreen.xib */; };
 		9C64E1CC1B5EE3C000645C27 /* PromosTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C64E1CB1B5EE3C000645C27 /* PromosTests.m */; };
+		9C81695A1B8402C500194733 /* ARFPromosLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C8169591B8402C500194733 /* ARFPromosLoadingView.m */; };
+		9C81695C1B8402DA00194733 /* ARFPromosLoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C81695B1B8402DA00194733 /* ARFPromosLoadingView.xib */; };
+		9CC2B2CE1B81870600F9F891 /* ARFPromosBannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CC2B2CD1B81870600F9F891 /* ARFPromosBannerView.m */; };
+		9CC2B2D01B81872300F9F891 /* ARFPromosBannerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CC2B2CF1B81872300F9F891 /* ARFPromosBannerView.xib */; };
 		9CCCDF1F1B7ABD26009FE8AB /* ARFCommerceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CCCDF1E1B7ABD26009FE8AB /* ARFCommerceViewController.m */; };
 		9CCCDF2A1B7AC6B5009FE8AB /* ARFCommerceBanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CCCDF291B7AC6B5009FE8AB /* ARFCommerceBanner.m */; };
 		9CCCDF2C1B7AC6C7009FE8AB /* ARFCommerceBanner.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CCCDF2B1B7AC6C7009FE8AB /* ARFCommerceBanner.xib */; };
+		9CD4A6531B82EB2900E5FAE7 /* ARFPromosBannerView+iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CD4A6521B82EB2900E5FAE7 /* ARFPromosBannerView+iCarousel.m */; };
 		9CED3C591B7E5176009F667C /* ARFCommerceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CED3C571B7E5176009F667C /* ARFCommerceCell.m */; };
 		9CED3C5A1B7E5176009F667C /* ARFCommerceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CED3C581B7E5176009F667C /* ARFCommerceCell.xib */; };
 /* End PBXBuildFile section */
@@ -61,9 +64,6 @@
 		9C2EC1271B705E2300811CF8 /* image2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image2.jpg; sourceTree = "<group>"; };
 		9C2EC1281B705E2300811CF8 /* image3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image3.jpg; sourceTree = "<group>"; };
 		9C2EC1291B705E2300811CF8 /* image4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image4.jpg; sourceTree = "<group>"; };
-		9C48FE3A1B6C38170053D388 /* ARFBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARFBannerView.h; sourceTree = "<group>"; };
-		9C48FE3B1B6C38170053D388 /* ARFBannerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARFBannerView.m; sourceTree = "<group>"; };
-		9C48FE3D1B6C384A0053D388 /* ARFBannerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ARFBannerView.xib; sourceTree = "<group>"; };
 		9C64E1AC1B5EE3C000645C27 /* Promos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Promos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C64E1B01B5EE3C000645C27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9C64E1B11B5EE3C000645C27 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -74,11 +74,19 @@
 		9C64E1C51B5EE3C000645C27 /* PromosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PromosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C64E1CA1B5EE3C000645C27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9C64E1CB1B5EE3C000645C27 /* PromosTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PromosTests.m; sourceTree = "<group>"; };
+		9C8169581B8402C500194733 /* ARFPromosLoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARFPromosLoadingView.h; sourceTree = "<group>"; };
+		9C8169591B8402C500194733 /* ARFPromosLoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARFPromosLoadingView.m; sourceTree = "<group>"; };
+		9C81695B1B8402DA00194733 /* ARFPromosLoadingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ARFPromosLoadingView.xib; sourceTree = "<group>"; };
+		9CC2B2CC1B81870600F9F891 /* ARFPromosBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARFPromosBannerView.h; sourceTree = "<group>"; };
+		9CC2B2CD1B81870600F9F891 /* ARFPromosBannerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARFPromosBannerView.m; sourceTree = "<group>"; };
+		9CC2B2CF1B81872300F9F891 /* ARFPromosBannerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ARFPromosBannerView.xib; sourceTree = "<group>"; };
 		9CCCDF1D1B7ABD26009FE8AB /* ARFCommerceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARFCommerceViewController.h; sourceTree = "<group>"; };
 		9CCCDF1E1B7ABD26009FE8AB /* ARFCommerceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARFCommerceViewController.m; sourceTree = "<group>"; };
 		9CCCDF281B7AC6B5009FE8AB /* ARFCommerceBanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARFCommerceBanner.h; sourceTree = "<group>"; };
 		9CCCDF291B7AC6B5009FE8AB /* ARFCommerceBanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARFCommerceBanner.m; sourceTree = "<group>"; };
 		9CCCDF2B1B7AC6C7009FE8AB /* ARFCommerceBanner.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ARFCommerceBanner.xib; sourceTree = "<group>"; };
+		9CD4A6511B82EB2900E5FAE7 /* ARFPromosBannerView+iCarousel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ARFPromosBannerView+iCarousel.h"; sourceTree = "<group>"; };
+		9CD4A6521B82EB2900E5FAE7 /* ARFPromosBannerView+iCarousel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ARFPromosBannerView+iCarousel.m"; sourceTree = "<group>"; };
 		9CED3C561B7E5176009F667C /* ARFCommerceCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARFCommerceCell.h; sourceTree = "<group>"; };
 		9CED3C571B7E5176009F667C /* ARFCommerceCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARFCommerceCell.m; sourceTree = "<group>"; };
 		9CED3C581B7E5176009F667C /* ARFCommerceCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ARFCommerceCell.xib; sourceTree = "<group>"; };
@@ -169,6 +177,16 @@
 			name = Detail;
 			sourceTree = "<group>";
 		};
+		9C10158A1B853C5C00B36278 /* Loading */ = {
+			isa = PBXGroup;
+			children = (
+				9C8169581B8402C500194733 /* ARFPromosLoadingView.h */,
+				9C8169591B8402C500194733 /* ARFPromosLoadingView.m */,
+				9C81695B1B8402DA00194733 /* ARFPromosLoadingView.xib */,
+			);
+			name = Loading;
+			sourceTree = "<group>";
+		};
 		9C1105691B69D224000C32CF /* Base */ = {
 			isa = PBXGroup;
 			children = (
@@ -190,12 +208,8 @@
 		9C48FE3F1B6C38B90053D388 /* Banner */ = {
 			isa = PBXGroup;
 			children = (
-				9C48FE3A1B6C38170053D388 /* ARFBannerView.h */,
-				9C48FE3B1B6C38170053D388 /* ARFBannerView.m */,
-				9C48FE3D1B6C384A0053D388 /* ARFBannerView.xib */,
-				9CCCDF281B7AC6B5009FE8AB /* ARFCommerceBanner.h */,
-				9CCCDF291B7AC6B5009FE8AB /* ARFCommerceBanner.m */,
-				9CCCDF2B1B7AC6C7009FE8AB /* ARFCommerceBanner.xib */,
+				9CC2B2CA1B8185E100F9F891 /* Promos  */,
+				9CC2B2CB1B81862F00F9F891 /* Commerce */,
 			);
 			name = Banner;
 			sourceTree = "<group>";
@@ -273,6 +287,28 @@
 			name = Imagenes;
 			sourceTree = "<group>";
 		};
+		9CC2B2CA1B8185E100F9F891 /* Promos  */ = {
+			isa = PBXGroup;
+			children = (
+				9C10158A1B853C5C00B36278 /* Loading */,
+				9CC2B2CC1B81870600F9F891 /* ARFPromosBannerView.h */,
+				9CC2B2CD1B81870600F9F891 /* ARFPromosBannerView.m */,
+				9CC2B2CF1B81872300F9F891 /* ARFPromosBannerView.xib */,
+				9CD4A6541B82EB3300E5FAE7 /* iCarousel */,
+			);
+			name = "Promos ";
+			sourceTree = "<group>";
+		};
+		9CC2B2CB1B81862F00F9F891 /* Commerce */ = {
+			isa = PBXGroup;
+			children = (
+				9CCCDF281B7AC6B5009FE8AB /* ARFCommerceBanner.h */,
+				9CCCDF291B7AC6B5009FE8AB /* ARFCommerceBanner.m */,
+				9CCCDF2B1B7AC6C7009FE8AB /* ARFCommerceBanner.xib */,
+			);
+			name = Commerce;
+			sourceTree = "<group>";
+		};
 		9CCCDF201B7ABEDC009FE8AB /* Promo Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -300,6 +336,15 @@
 				9CCCDF1E1B7ABD26009FE8AB /* ARFCommerceViewController.m */,
 			);
 			name = Commerce;
+			sourceTree = "<group>";
+		};
+		9CD4A6541B82EB3300E5FAE7 /* iCarousel */ = {
+			isa = PBXGroup;
+			children = (
+				9CD4A6511B82EB2900E5FAE7 /* ARFPromosBannerView+iCarousel.h */,
+				9CD4A6521B82EB2900E5FAE7 /* ARFPromosBannerView+iCarousel.m */,
+			);
+			name = iCarousel;
 			sourceTree = "<group>";
 		};
 		B78A798E2E1119E329D3A4D5 /* Pods */ = {
@@ -402,9 +447,10 @@
 				9C0C66E31B5EEF040040CF98 /* ARFPromoCell.xib in Resources */,
 				9C64E1C01B5EE3C000645C27 /* LaunchScreen.xib in Resources */,
 				9C64E1BD1B5EE3C000645C27 /* Images.xcassets in Resources */,
+				9CC2B2D01B81872300F9F891 /* ARFPromosBannerView.xib in Resources */,
 				9C1105651B69B8CD000C32CF /* AirshipConfig.plist in Resources */,
+				9C81695C1B8402DA00194733 /* ARFPromosLoadingView.xib in Resources */,
 				9C2EC12D1B705E2300811CF8 /* image4.jpg in Resources */,
-				9C48FE3E1B6C384A0053D388 /* ARFBannerView.xib in Resources */,
 				9C2EC12B1B705E2300811CF8 /* image2.jpg in Resources */,
 				9C0C66E91B5F3C420040CF98 /* ARFPromosDetailViewController.xib in Resources */,
 			);
@@ -460,13 +506,15 @@
 				9CCCDF2A1B7AC6B5009FE8AB /* ARFCommerceBanner.m in Sources */,
 				9C0C66DE1B5EE8670040CF98 /* ARFPromosViewController.m in Sources */,
 				9C64E1B51B5EE3C000645C27 /* AppDelegate.m in Sources */,
+				9C81695A1B8402C500194733 /* ARFPromosLoadingView.m in Sources */,
 				9C64E1B21B5EE3C000645C27 /* main.m in Sources */,
 				9CED3C591B7E5176009F667C /* ARFCommerceCell.m in Sources */,
 				9CCCDF1F1B7ABD26009FE8AB /* ARFCommerceViewController.m in Sources */,
 				9C0C66E21B5EEF040040CF98 /* ARFPromoCell.m in Sources */,
+				9CD4A6531B82EB2900E5FAE7 /* ARFPromosBannerView+iCarousel.m in Sources */,
 				9C0C66E81B5F3C420040CF98 /* ARFPromosDetailViewController.m in Sources */,
 				9C1105681B69D202000C32CF /* ARFBaseViewController.m in Sources */,
-				9C48FE3C1B6C38170053D388 /* ARFBannerView.m in Sources */,
+				9CC2B2CE1B81870600F9F891 /* ARFPromosBannerView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
