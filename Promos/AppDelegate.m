@@ -22,6 +22,7 @@
 @interface AppDelegate ()
 
 @property (nonatomic, strong) UAPushNotificationHandler *pushHandler;
+@property (nonatomic, strong) UALocationService *locationService;
 
 @end
 
@@ -55,9 +56,9 @@
     
     
     [UALocationService setAirshipLocationServiceEnabled:YES];
-    UALocationService *locationService = [UAirship shared].locationService;
-    [locationService setBackgroundLocationServiceEnabled:NO];
-    [locationService startReportingSignificantLocationChanges];
+    self.locationService = [UAirship shared].locationService;
+    [self.locationService setBackgroundLocationServiceEnabled:NO];
+    [self.locationService startReportingSignificantLocationChanges];
     
 
     //Parse Registration
@@ -81,8 +82,8 @@
 }
 
 - (void)applicationDidEnterBackground:(UIApplication *)application {
-    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
-    // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+
+    [self.locationService stopReportingSignificantLocationChanges];
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
@@ -97,7 +98,10 @@
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {
-    // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+
+    
+    [self.locationService stopReportingSignificantLocationChanges];
+    
 }
 
 
