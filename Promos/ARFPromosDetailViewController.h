@@ -8,8 +8,11 @@
 
 #import "ARFBaseViewController.h"
 
-#import <UIKit/UIKit.h>
+
+@import UIKit;
+@import Social;
 #import <Parse/Parse.h>
+
 
 @interface ARFPromosDetailViewController : ARFBaseViewController
 

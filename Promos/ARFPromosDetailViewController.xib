@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
@@ -52,6 +52,26 @@
                         <constraint firstAttribute="height" constant="102" id="ejP-eP-0Yh"/>
                     </constraints>
                 </imageView>
+                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZmR-Eb-PgE">
+                    <rect key="frame" x="8" y="500" width="140" height="30"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <state key="normal" title="Compartir en Twitter">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="shareOnTwitter:" destination="-1" eventType="touchUpInside" id="ZhG-r8-2cY"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hCr-oo-Cdw">
+                    <rect key="frame" x="430" y="500" width="162" height="30"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <state key="normal" title="Compartir en Facebook">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="shareOnFacebook:" destination="-1" eventType="touchUpInside" id="Q8a-VM-3ck"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
@@ -59,31 +79,42 @@
                 <constraint firstItem="rEB-IK-HkC" firstAttribute="leading" secondItem="iHC-vG-N0z" secondAttribute="trailing" constant="62" id="2be-QB-mcn">
                     <variation key="heightClass=regular" constant="20"/>
                 </constraint>
+                <constraint firstItem="ZmR-Eb-PgE" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="97s-hd-ckK"/>
                 <constraint firstItem="iHC-vG-N0z" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="34" id="EMX-P6-6Gz"/>
                 <constraint firstItem="iHC-vG-N0z" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="FLs-Al-xPP"/>
                 <constraint firstAttribute="centerY" secondItem="Mnb-mO-HnZ" secondAttribute="centerY" id="FsA-ls-B0U"/>
-                <constraint firstItem="rEB-IK-HkC" firstAttribute="leading" secondItem="iHC-vG-N0z" secondAttribute="trailing" constant="62" id="Mhu-bP-ohm"/>
+                <constraint firstItem="ZmR-Eb-PgE" firstAttribute="centerY" secondItem="hCr-oo-Cdw" secondAttribute="centerY" id="LtV-pX-Flv"/>
+                <constraint firstAttribute="trailing" secondItem="hCr-oo-Cdw" secondAttribute="trailing" constant="8" id="Tdm-hW-c9b"/>
                 <constraint firstItem="rEB-IK-HkC" firstAttribute="leading" secondItem="KSV-Nj-0eM" secondAttribute="leading" id="XKB-cI-X1z"/>
                 <constraint firstAttribute="centerX" secondItem="Mnb-mO-HnZ" secondAttribute="centerX" id="dW1-Mf-xOx"/>
                 <constraint firstItem="KSV-Nj-0eM" firstAttribute="top" secondItem="rEB-IK-HkC" secondAttribute="bottom" constant="13" id="eQw-Ni-H3V"/>
                 <constraint firstItem="Stf-Vj-TZh" firstAttribute="top" secondItem="Mnb-mO-HnZ" secondAttribute="bottom" constant="8" id="gCR-Vg-3qM"/>
-                <constraint firstItem="rEB-IK-HkC" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="h4b-5S-YvD"/>
-                <constraint firstAttribute="centerX" secondItem="Stf-Vj-TZh" secondAttribute="centerX" id="iNk-Pm-SSr"/>
                 <constraint firstItem="rEB-IK-HkC" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="57" id="lHH-eo-trn"/>
-                <constraint firstAttribute="centerY" secondItem="Stf-Vj-TZh" secondAttribute="centerY" id="mQ6-yP-uuK"/>
+                <constraint firstItem="rEB-IK-HkC" firstAttribute="leading" secondItem="iHC-vG-N0z" secondAttribute="trailing" constant="62" id="oxb-QA-f03"/>
+                <constraint firstAttribute="bottom" secondItem="hCr-oo-Cdw" secondAttribute="bottom" constant="35" id="qk3-Eg-5NB"/>
             </constraints>
+            <nil key="simulatedBottomBarMetrics"/>
             <variation key="default">
                 <mask key="constraints">
                     <exclude reference="2be-QB-mcn"/>
-                    <exclude reference="Mhu-bP-ohm"/>
-                    <exclude reference="h4b-5S-YvD"/>
-                    <exclude reference="iNk-Pm-SSr"/>
-                    <exclude reference="mQ6-yP-uuK"/>
+                    <exclude reference="oxb-QA-f03"/>
+                    <exclude reference="qk3-Eg-5NB"/>
                 </mask>
             </variation>
             <variation key="heightClass=regular">
                 <mask key="constraints">
                     <include reference="2be-QB-mcn"/>
+                </mask>
+            </variation>
+            <variation key="widthClass=compact">
+                <mask key="constraints">
+                    <include reference="oxb-QA-f03"/>
+                    <include reference="qk3-Eg-5NB"/>
+                </mask>
+            </variation>
+            <variation key="heightClass=regular-widthClass=compact">
+                <mask key="constraints">
+                    <exclude reference="oxb-QA-f03"/>
                 </mask>
             </variation>
             <point key="canvasLocation" x="353" y="321"/>

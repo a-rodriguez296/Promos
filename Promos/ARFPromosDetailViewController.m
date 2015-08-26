@@ -61,6 +61,7 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark IBActions
 - (IBAction)donwloadPass:(id)sender {
     
     
@@ -112,6 +113,58 @@
     
 }
 
+- (IBAction)shareOnTwitter:(id)sender {
+    
+    if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeTwitter]){
+        
+        SLComposeViewController *tweet = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
+        [tweet setInitialText:[NSString stringWithFormat:@"Con Promo's acabo de obtener un %@ en %@", [self.promo objectForKey:kPromosAttributeTitle],[self.promo objectForKey:kPromosAttributeSubtitle]]];
+        [tweet setCompletionHandler:^(SLComposeViewControllerResult result)
+         {
+             if (result == SLComposeViewControllerResultDone)
+             {
+                 //TODO poner tracker de evento que compartió en Twitter la promo
+                 NSLog(@"The user sent the tweet");
+             }
+             else{
+                 //TODO Poner tracker de evento que se arrepintió de compartir en Twitter
+             }
+         }];
+        [self presentViewController:tweet animated:YES completion:nil];
+        
+    }
+    else{
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Atención" message:@"Para compartir en Twitter debes tener una cuenta instalada en tu celular" delegate:nil cancelButtonTitle:@"Aceptar" otherButtonTitles: nil];
+        [alertView show];
+    }
+    
+}
+- (IBAction)shareOnFacebook:(id)sender {
+    
+    if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeFacebook]){
+        SLComposeViewController *facebookPost = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
+        [facebookPost setInitialText:[NSString stringWithFormat:@"Con Promo's acabo de obtener un %@ en %@", [self.promo objectForKey:kPromosAttributeTitle],[self.promo objectForKey:kPromosAttributeSubtitle]]];
+        [facebookPost setCompletionHandler:^(SLComposeViewControllerResult result){
+           
+            
+            if (result == SLComposeViewControllerResultDone) {
+                
+                //TODO poner tracker de evento que compartió en Facebook la promo
+                
+            }
+            else{
+                //TODO Poner tracker de evento que se arrepintió de compartir en Facebook
+            }
+            
+        }];
+        [self presentViewController:facebookPost animated:YES completion:nil];
+    
+    }
+    else{
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Atención" message:@"Para compartir en Facebook debes tener una cuenta instalada en tu celular" delegate:nil cancelButtonTitle:@"Aceptar" otherButtonTitles: nil];
+        [alertView show];
+    }
+}
 
 #pragma mark - Pass controller delegate
 
