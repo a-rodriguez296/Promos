@@ -18,6 +18,17 @@ static NSString* const kParseClientKey        = @"NQm4dWmObFNJq17tQOqzFYJZTTbaN3
 
 
 
+//Urban Airship Wallet
+static NSString* const kWalletUsername        = @"alejo80805@hotmail.com";
+static NSString* const kWalletPassword        = @"Globant$2015";
+static NSString* const kWalletBaseUrl         = @"https://wallet-api.urbanairship.com/v1";
+
+
+
+
+
+//Promos Class
+
 static NSString* const kPromosClassName             = @"Promo";
 static NSString* const kPromosAttributeTitle        = @"title";
 static NSString* const kPromosAttributeSubtitle     = @"subtitle";
@@ -26,10 +37,16 @@ static NSString* const kPromosAttributeLogo         = @"logo";
 static NSString* const kPromosAttributePass         = @"pass";
 static NSString* const kPromosAttributeFeatured     = @"featured";
 static NSString* const kPromosAttributeFeaturedImage = @"featuredImage";
+static NSString* const kPromosAttributePassURL      = @"passURL";
 
-
+//Commerce Class
 static NSString* const kCommerceClassName             = @"Commerce";
 static NSString* const kCommerceAttributeName         = @"commerceName";
+
+//Comments Class
+static NSString* const kCommentsClassName             = @"Comments";
+static NSString* const kCommentsAttributeText         = @"text";
+static NSString* const kCommentsAttributePromo        = @"promo";
 
 
 

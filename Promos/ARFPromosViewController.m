@@ -14,7 +14,6 @@
 
 #import <Parse/Parse.h>
 #import <ParseUI/ParseUI.h>
-#import "PureLayout.h"
 #import <ReactiveCocoa/ReactiveCocoa.h>
 
 static NSString* const kPromoCellIdentifier        = @"Cell";

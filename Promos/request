@@ -1,0 +1,1 @@
+curl -X POST https://wallet-api.urbanairship.com/v1/pass/44416?api_key=6ef5a726-336a-4a2a-9577-7c59afb4b197  -H "Api-Revision:1.2" -d 'json={"fields":{"Coupon #":{"changeMessage":"created pass","value":"123456","label":"Coupon Number"}}, "publicURL" : {"type" : "Multiple"}}'

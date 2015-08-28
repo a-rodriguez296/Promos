@@ -13,7 +13,7 @@
 
 #import <Parse/Parse.h>
 #import <ParseUI/ParseUI.h>
-#import "PureLayout.h"
+
 
 static NSString* const kCommerceCellIdentifier        = @"CommerceCell";
 

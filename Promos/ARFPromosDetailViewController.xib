@@ -36,13 +36,13 @@
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="rEB-IK-HkC">
                     <rect key="frame" x="172" y="57" width="44" height="21"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="KSV-Nj-0eM">
                     <rect key="frame" x="172" y="91" width="42" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iHC-vG-N0z" customClass="PFImageView">
@@ -72,6 +72,15 @@
                         <action selector="shareOnFacebook:" destination="-1" eventType="touchUpInside" id="Q8a-VM-3ck"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jZn-Ig-MVO">
+                    <rect key="frame" x="245" y="387" width="111" height="30"/>
+                    <state key="normal" title="Ver comentarios">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="showComments:" destination="-1" eventType="touchUpInside" id="zYo-aB-OGg"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
@@ -83,13 +92,16 @@
                 <constraint firstItem="iHC-vG-N0z" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="34" id="EMX-P6-6Gz"/>
                 <constraint firstItem="iHC-vG-N0z" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="FLs-Al-xPP"/>
                 <constraint firstAttribute="centerY" secondItem="Mnb-mO-HnZ" secondAttribute="centerY" id="FsA-ls-B0U"/>
+                <constraint firstItem="jZn-Ig-MVO" firstAttribute="top" secondItem="Stf-Vj-TZh" secondAttribute="bottom" constant="32" id="H1s-3J-k9e"/>
                 <constraint firstItem="ZmR-Eb-PgE" firstAttribute="centerY" secondItem="hCr-oo-Cdw" secondAttribute="centerY" id="LtV-pX-Flv"/>
+                <constraint firstItem="jZn-Ig-MVO" firstAttribute="top" secondItem="Stf-Vj-TZh" secondAttribute="bottom" constant="35" id="R4y-Ya-APG"/>
                 <constraint firstAttribute="trailing" secondItem="hCr-oo-Cdw" secondAttribute="trailing" constant="8" id="Tdm-hW-c9b"/>
                 <constraint firstItem="rEB-IK-HkC" firstAttribute="leading" secondItem="KSV-Nj-0eM" secondAttribute="leading" id="XKB-cI-X1z"/>
                 <constraint firstAttribute="centerX" secondItem="Mnb-mO-HnZ" secondAttribute="centerX" id="dW1-Mf-xOx"/>
                 <constraint firstItem="KSV-Nj-0eM" firstAttribute="top" secondItem="rEB-IK-HkC" secondAttribute="bottom" constant="13" id="eQw-Ni-H3V"/>
                 <constraint firstItem="Stf-Vj-TZh" firstAttribute="top" secondItem="Mnb-mO-HnZ" secondAttribute="bottom" constant="8" id="gCR-Vg-3qM"/>
                 <constraint firstItem="rEB-IK-HkC" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="57" id="lHH-eo-trn"/>
+                <constraint firstItem="jZn-Ig-MVO" firstAttribute="centerX" secondItem="Stf-Vj-TZh" secondAttribute="centerX" constant="0.5" id="ljU-ub-fNj"/>
                 <constraint firstItem="rEB-IK-HkC" firstAttribute="leading" secondItem="iHC-vG-N0z" secondAttribute="trailing" constant="62" id="oxb-QA-f03"/>
                 <constraint firstAttribute="bottom" secondItem="hCr-oo-Cdw" secondAttribute="bottom" constant="35" id="qk3-Eg-5NB"/>
             </constraints>
@@ -98,6 +110,8 @@
                 <mask key="constraints">
                     <exclude reference="2be-QB-mcn"/>
                     <exclude reference="oxb-QA-f03"/>
+                    <exclude reference="H1s-3J-k9e"/>
+                    <exclude reference="R4y-Ya-APG"/>
                     <exclude reference="qk3-Eg-5NB"/>
                 </mask>
             </variation>
@@ -109,12 +123,15 @@
             <variation key="widthClass=compact">
                 <mask key="constraints">
                     <include reference="oxb-QA-f03"/>
+                    <include reference="R4y-Ya-APG"/>
                     <include reference="qk3-Eg-5NB"/>
                 </mask>
             </variation>
             <variation key="heightClass=regular-widthClass=compact">
                 <mask key="constraints">
                     <exclude reference="oxb-QA-f03"/>
+                    <include reference="H1s-3J-k9e"/>
+                    <exclude reference="R4y-Ya-APG"/>
                 </mask>
             </variation>
             <point key="canvasLocation" x="353" y="321"/>
