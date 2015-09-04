@@ -61,3 +61,8 @@ static float const kAnimationConstant = 0.5;
 static float const kPromosBannerAnimationConstant = 3.0;
 static float const kPromosBannerScrollTimeConstant = 0.6;
 
+
+#pragma mark Font names
+static NSString* const kFontMyriadRegular             = @"MyriadPro-Regular";
+static NSString* const kFontMyriadRegularSemiBold             = @"MyriadPro-Semibold";
+

@@ -30,15 +30,14 @@
 		9C81695C1B8402DA00194733 /* ARFPromosLoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C81695B1B8402DA00194733 /* ARFPromosLoadingView.xib */; };
 		9C87DE9D1B8E7A32001E34A9 /* ARFBaseUrbanApiClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C87DE9C1B8E7A32001E34A9 /* ARFBaseUrbanApiClient.m */; };
 		9C87DEA11B8EA943001E34A9 /* ARFPassApiClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C87DEA01B8EA943001E34A9 /* ARFPassApiClient.m */; };
+		9CACF78F1B9A63F70090650B /* UIColor+Color.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CACF78E1B9A63F70090650B /* UIColor+Color.m */; };
+		9CACF7921B9A64000090650B /* ARFColorUitls.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CACF7911B9A64000090650B /* ARFColorUitls.m */; };
 		9CC2B2CE1B81870600F9F891 /* ARFPromosBannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CC2B2CD1B81870600F9F891 /* ARFPromosBannerView.m */; };
 		9CC2B2D01B81872300F9F891 /* ARFPromosBannerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CC2B2CF1B81872300F9F891 /* ARFPromosBannerView.xib */; };
-
 		9CC33A391B94DC460019889A /* request in Resources */ = {isa = PBXBuildFile; fileRef = 9CC33A381B94DC460019889A /* request */; };
-
 		9CC33A431B94E7060019889A /* ARFCommentsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CC33A411B94E7060019889A /* ARFCommentsCell.m */; };
 		9CC33A441B94E7060019889A /* ARFCommentsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CC33A421B94E7060019889A /* ARFCommentsCell.xib */; };
 		9CC99D851B94F1EA00ADE1E3 /* ARFCommentsViewController+UIKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CC99D841B94F1EA00ADE1E3 /* ARFCommentsViewController+UIKeyboard.m */; };
-
 		9CCCDF1F1B7ABD26009FE8AB /* ARFCommerceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CCCDF1E1B7ABD26009FE8AB /* ARFCommerceViewController.m */; };
 		9CCCDF2A1B7AC6B5009FE8AB /* ARFCommerceBanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CCCDF291B7AC6B5009FE8AB /* ARFCommerceBanner.m */; };
 		9CCCDF2C1B7AC6C7009FE8AB /* ARFCommerceBanner.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CCCDF2B1B7AC6C7009FE8AB /* ARFCommerceBanner.xib */; };
@@ -91,29 +90,25 @@
 		9C8169581B8402C500194733 /* ARFPromosLoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARFPromosLoadingView.h; sourceTree = "<group>"; };
 		9C8169591B8402C500194733 /* ARFPromosLoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARFPromosLoadingView.m; sourceTree = "<group>"; };
 		9C81695B1B8402DA00194733 /* ARFPromosLoadingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ARFPromosLoadingView.xib; sourceTree = "<group>"; };
-
 		9C87DE9B1B8E7A32001E34A9 /* ARFBaseUrbanApiClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARFBaseUrbanApiClient.h; sourceTree = "<group>"; };
 		9C87DE9C1B8E7A32001E34A9 /* ARFBaseUrbanApiClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARFBaseUrbanApiClient.m; sourceTree = "<group>"; };
 		9C87DE9F1B8EA943001E34A9 /* ARFPassApiClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARFPassApiClient.h; sourceTree = "<group>"; };
 		9C87DEA01B8EA943001E34A9 /* ARFPassApiClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARFPassApiClient.m; sourceTree = "<group>"; };
-
-		9C919DB31B90CC9D0062031E /* ARFCommentsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARFCommentsViewController.h; sourceTree = "<group>"; };
-		9C919DB41B90CC9D0062031E /* ARFCommentsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARFCommentsViewController.m; sourceTree = "<group>"; };
-		9C919DB51B90CC9D0062031E /* ARFCommentsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ARFCommentsViewController.xib; sourceTree = "<group>"; };
-
-
+		9CACF78D1B9A63F70090650B /* UIColor+Color.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Color.h"; sourceTree = "<group>"; };
+		9CACF78E1B9A63F70090650B /* UIColor+Color.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Color.m"; sourceTree = "<group>"; };
+		9CACF7901B9A64000090650B /* ARFColorUitls.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARFColorUitls.h; sourceTree = "<group>"; };
+		9CACF7911B9A64000090650B /* ARFColorUitls.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARFColorUitls.m; sourceTree = "<group>"; };
+		9CACF7951B9A650A0090650B /* MyriadPro-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MyriadPro-Regular.otf"; sourceTree = "<group>"; };
+		9CACF7961B9A654E0090650B /* MyriadPro-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MyriadPro-SemiBold.otf"; sourceTree = "<group>"; };
 		9CC2B2CC1B81870600F9F891 /* ARFPromosBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARFPromosBannerView.h; sourceTree = "<group>"; };
 		9CC2B2CD1B81870600F9F891 /* ARFPromosBannerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARFPromosBannerView.m; sourceTree = "<group>"; };
 		9CC2B2CF1B81872300F9F891 /* ARFPromosBannerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ARFPromosBannerView.xib; sourceTree = "<group>"; };
-
 		9CC33A381B94DC460019889A /* request */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = request; sourceTree = "<group>"; };
-
 		9CC33A401B94E7060019889A /* ARFCommentsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARFCommentsCell.h; sourceTree = "<group>"; };
 		9CC33A411B94E7060019889A /* ARFCommentsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARFCommentsCell.m; sourceTree = "<group>"; };
 		9CC33A421B94E7060019889A /* ARFCommentsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ARFCommentsCell.xib; sourceTree = "<group>"; };
 		9CC99D831B94F1EA00ADE1E3 /* ARFCommentsViewController+UIKeyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ARFCommentsViewController+UIKeyboard.h"; sourceTree = "<group>"; };
 		9CC99D841B94F1EA00ADE1E3 /* ARFCommentsViewController+UIKeyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ARFCommentsViewController+UIKeyboard.m"; sourceTree = "<group>"; };
-
 		9CCCDF1D1B7ABD26009FE8AB /* ARFCommerceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARFCommerceViewController.h; sourceTree = "<group>"; };
 		9CCCDF1E1B7ABD26009FE8AB /* ARFCommerceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARFCommerceViewController.m; sourceTree = "<group>"; };
 		9CCCDF281B7AC6B5009FE8AB /* ARFCommerceBanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARFCommerceBanner.h; sourceTree = "<group>"; };
@@ -158,6 +153,7 @@
 		9C0C66D61B5EE7C80040CF98 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				9CACF7931B9A64090090650B /* Color */,
 				9C96831D1B7999BE007E33C1 /* Imagenes */,
 				9C0C66D51B5EE79B0040CF98 /* ARFConstants.h */,
 			);
@@ -272,6 +268,7 @@
 		9C64E1AE1B5EE3C000645C27 /* Promos */ = {
 			isa = PBXGroup;
 			children = (
+				9CACF7971B9A65530090650B /* Resources */,
 				9C87DE9E1B8E7A3B001E34A9 /* Network */,
 				9C0C66E41B5EEF0D0040CF98 /* Views */,
 				9C0C66D61B5EE7C80040CF98 /* Utils */,
@@ -349,6 +346,34 @@
 				9C2EC1291B705E2300811CF8 /* image4.jpg */,
 			);
 			name = Imagenes;
+			sourceTree = "<group>";
+		};
+		9CACF7931B9A64090090650B /* Color */ = {
+			isa = PBXGroup;
+			children = (
+				9CACF7901B9A64000090650B /* ARFColorUitls.h */,
+				9CACF7911B9A64000090650B /* ARFColorUitls.m */,
+				9CACF7941B9A64160090650B /* Color Extension */,
+			);
+			name = Color;
+			sourceTree = "<group>";
+		};
+		9CACF7941B9A64160090650B /* Color Extension */ = {
+			isa = PBXGroup;
+			children = (
+				9CACF78D1B9A63F70090650B /* UIColor+Color.h */,
+				9CACF78E1B9A63F70090650B /* UIColor+Color.m */,
+			);
+			name = "Color Extension";
+			sourceTree = "<group>";
+		};
+		9CACF7971B9A65530090650B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9CACF7961B9A654E0090650B /* MyriadPro-SemiBold.otf */,
+				9CACF7951B9A650A0090650B /* MyriadPro-Regular.otf */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 		9CC2B2CA1B8185E100F9F891 /* Promos  */ = {
@@ -601,6 +626,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CACF7921B9A64000090650B /* ARFColorUitls.m in Sources */,
 				9CCCDF2A1B7AC6B5009FE8AB /* ARFCommerceBanner.m in Sources */,
 				9CC33A431B94E7060019889A /* ARFCommentsCell.m in Sources */,
 				9C0C66DE1B5EE8670040CF98 /* ARFPromosViewController.m in Sources */,
@@ -608,6 +634,7 @@
 				9C81695A1B8402C500194733 /* ARFPromosLoadingView.m in Sources */,
 				9C87DEA11B8EA943001E34A9 /* ARFPassApiClient.m in Sources */,
 				9C64E1B21B5EE3C000645C27 /* main.m in Sources */,
+				9CACF78F1B9A63F70090650B /* UIColor+Color.m in Sources */,
 				9CED3C591B7E5176009F667C /* ARFCommerceCell.m in Sources */,
 				9CC99D851B94F1EA00ADE1E3 /* ARFCommentsViewController+UIKeyboard.m in Sources */,
 				9CCCDF1F1B7ABD26009FE8AB /* ARFCommerceViewController.m in Sources */,

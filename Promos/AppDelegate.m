@@ -11,6 +11,7 @@
 #import "ARFPromosViewController.h"
 #import "ARFPromosDetailViewController.h"
 #import "ARFCommerceViewController.h"
+#import "ARFColorUitls.h"
 
 #import <Parse/Parse.h>
 #import "UAPushNotificationHandler.h"
@@ -30,6 +31,8 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    [self configureAppearance];
     
     //Urban Airship
     [UAConfig defaultConfig];
@@ -181,6 +184,40 @@
     [tabBC setViewControllers:@[promosNavVC, commerceNavVC]];
     
     return tabBC;
+}
+
+
+-(void) configureAppearance{
+    
+    
+    //Averiguar cómo cambiar el color el status bar
+    
+    // barTintColor cambia el color de la barra
+    [[UINavigationBar appearance] setBarTintColor: [ARFColorUitls backgroundColor]];
+    
+    // TintColor asigna el color de los botones
+    [[UINavigationBar appearance] setTintColor:[UIColor colorWithWhite:1.0
+                                                                 alpha:1]];
+    
+    
+    //    for (NSString* family in [UIFont familyNames])
+    //    {
+    //        NSLog(@"%@", family);
+    //
+    //        for (NSString* name in [UIFont fontNamesForFamilyName: family])
+    //        {
+    //            NSLog(@"  %@", name);
+    //        }
+    //    }
+    
+    
+    UIFont *navbarFont = [UIFont fontWithName:kFontMyriadRegularSemiBold
+                                         size:24];
+    
+    NSDictionary * navBarTitleTextAttributes = [NSDictionary dictionaryWithObjects:@[[UIColor colorWithWhite:1.0 alpha:1],navbarFont] forKeys:@[NSForegroundColorAttributeName, NSFontAttributeName]];
+    
+    [[UINavigationBar appearance] setTitleTextAttributes:navBarTitleTextAttributes];
+    
 }
 
 
