@@ -16,6 +16,7 @@
 @property (weak, nonatomic) IBOutlet PFImageView *imagePromo;
 @property (weak, nonatomic) IBOutlet UILabel *lblTitle;
 @property (weak, nonatomic) IBOutlet UILabel *lblSubtitle;
+@property (weak, nonatomic) IBOutlet UILabel *lblCommerceName;
 
 
 @end
@@ -36,6 +37,7 @@
     
     self.lblTitle.text = [object objectForKey:kPromosAttributeTitle];
     self.lblSubtitle.text = [object objectForKey:kPromosAttributeSubtitle];
+    [self.lblCommerceName setText:[object objectForKey:kPromosAttributeCommerceName]];
     [self.imagePromo setFile:[object objectForKey:kPromosAttributeLogo]];
     [self.imagePromo loadInBackground];
 }

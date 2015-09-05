@@ -251,6 +251,7 @@
 			isa = PBXGroup;
 			children = (
 				9C64E1AE1B5EE3C000645C27 /* Promos */,
+				9CACF7971B9A65530090650B /* Resources */,
 				9C64E1C81B5EE3C000645C27 /* PromosTests */,
 				9C64E1AD1B5EE3C000645C27 /* Products */,
 				B78A798E2E1119E329D3A4D5 /* Pods */,
@@ -270,7 +271,6 @@
 		9C64E1AE1B5EE3C000645C27 /* Promos */ = {
 			isa = PBXGroup;
 			children = (
-				9CACF7971B9A65530090650B /* Resources */,
 				9C87DE9E1B8E7A3B001E34A9 /* Network */,
 				9C0C66E41B5EEF0D0040CF98 /* Views */,
 				9C0C66D61B5EE7C80040CF98 /* Utils */,
@@ -376,6 +376,7 @@
 				9CACF7951B9A650A0090650B /* MyriadPro-Regular.otf */,
 			);
 			name = Resources;
+			path = Promos;
 			sourceTree = "<group>";
 		};
 		9CC2B2CA1B8185E100F9F891 /* Promos  */ = {

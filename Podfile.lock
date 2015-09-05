@@ -1,6 +1,27 @@
 PODS:
+  - AFNetworking (2.6.0):
+    - AFNetworking/NSURLConnection (= 2.6.0)
+    - AFNetworking/NSURLSession (= 2.6.0)
+    - AFNetworking/Reachability (= 2.6.0)
+    - AFNetworking/Security (= 2.6.0)
+    - AFNetworking/Serialization (= 2.6.0)
+    - AFNetworking/UIKit (= 2.6.0)
+  - AFNetworking/NSURLConnection (2.6.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/NSURLSession (2.6.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (2.6.0)
+  - AFNetworking/Security (2.6.0)
+  - AFNetworking/Serialization (2.6.0)
+  - AFNetworking/UIKit (2.6.0):
+    - AFNetworking/NSURLConnection
+    - AFNetworking/NSURLSession
   - Asterism (1.0.0)
-  - Bolts/Tasks (1.2.0)
+  - Bolts/Tasks (1.2.1)
   - iCarousel (1.8.2)
   - Mantle (1.5.5):
     - Mantle/extobjc (= 1.5.5)
@@ -14,7 +35,6 @@ PODS:
     - Bolts/Tasks (>= 1.2.0)
   - ParseUI (1.1.4):
     - Parse (~> 1.7)
-  - PureLayout (2.0.6)
   - ReactiveCocoa (2.5):
     - ReactiveCocoa/UI (= 2.5)
   - ReactiveCocoa/Core (2.5):
@@ -22,37 +42,37 @@ PODS:
   - ReactiveCocoa/no-arc (2.5)
   - ReactiveCocoa/UI (2.5):
     - ReactiveCocoa/Core
-  - UrbanAirship-iOS-SDK/All (6.1.4):
+  - UrbanAirship-iOS-SDK/All (6.2.0):
     - UrbanAirship-iOS-SDK/Core
     - UrbanAirship-iOS-SDK/PushUI
     - UrbanAirship-iOS-SDK/RichPushUI
-  - UrbanAirship-iOS-SDK/Core (6.1.4)
-  - UrbanAirship-iOS-SDK/PushUI (6.1.4):
+  - UrbanAirship-iOS-SDK/Core (6.2.0)
+  - UrbanAirship-iOS-SDK/PushUI (6.2.0):
     - UrbanAirship-iOS-SDK/Core
-  - UrbanAirship-iOS-SDK/RichPushUI (6.1.4):
+  - UrbanAirship-iOS-SDK/RichPushUI (6.2.0):
     - UrbanAirship-iOS-SDK/Core
 
 DEPENDENCIES:
+  - AFNetworking (~> 2.6.0)
   - iCarousel
   - MBProgressHUD (~> 0.9.1)
   - MTLParseAdapter
   - Parse (~> 1.7.2)
   - ParseUI
-  - PureLayout (~> 2.0.6)
   - ReactiveCocoa
   - UrbanAirship-iOS-SDK/All
 
 SPEC CHECKSUMS:
+  AFNetworking: 79f7eb1a0fcfa7beb409332b2ca49afe9ce53b05
   Asterism: b2992aaf4ac2dbc66c3aea3a6412c67e3e689835
-  Bolts: d176cb1e0012175589e389a9db49b85e27787576
+  Bolts: 7686a5cb204d1ac54cee26f12d9b7622db3f80d1
   iCarousel: 67c8a43da5a46795b56aadfc96cd36a16f6149b2
   Mantle: 1b29072a707453975b200a173cf77ec1e2810b75
   MBProgressHUD: c47f2c166c126cf2ce36498d80f33e754d4e93ad
   MTLParseAdapter: ca4a1df75b4fe332ec618762f43d785f559cae2b
   Parse: 373adbb1ad2e34d383542c3b28f678c49ebe4881
   ParseUI: d1228541b02a36a7354c8f47747f5f7a89cf1ff0
-  PureLayout: f25f0bb904d5ccfe6e31da3cb869185259f02e0d
   ReactiveCocoa: e2db045570aa97c695e7aa97c2bcab222ae51f4a
-  UrbanAirship-iOS-SDK: bf2792b2c1367deaa4d0fe89370f97c8985efa83
+  UrbanAirship-iOS-SDK: c4a2b219ef0681470b82209a4921e93e205c8944
 
-COCOAPODS: 0.37.2
+COCOAPODS: 0.38.2

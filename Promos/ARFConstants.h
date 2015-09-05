@@ -38,6 +38,7 @@ static NSString* const kPromosAttributePass         = @"pass";
 static NSString* const kPromosAttributeFeatured     = @"featured";
 static NSString* const kPromosAttributeFeaturedImage = @"featuredImage";
 static NSString* const kPromosAttributePassURL      = @"passURL";
+static NSString* const kPromosAttributeCommerceName      = @"commerceName";
 
 //Commerce Class
 static NSString* const kCommerceClassName             = @"Commerce";
