@@ -195,6 +195,8 @@
     // barTintColor cambia el color de la barra
     [[UINavigationBar appearance] setBarTintColor: [ARFColorUitls backgroundColor]];
     
+    [[UINavigationBar appearance] setTranslucent:NO];
+    
     // TintColor asigna el color de los botones
     [[UINavigationBar appearance] setTintColor:[UIColor colorWithWhite:1.0
                                                                  alpha:1]];

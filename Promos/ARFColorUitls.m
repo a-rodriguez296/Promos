@@ -14,7 +14,7 @@
 
 +(UIColor *) backgroundColor{
     
-    return [UIColor generateColorWithRed:106 green:212.0 blue:40.0 alpha:8.0];
+    return [UIColor generateColorWithRed:109.0 green:219.0 blue:41.0 alpha:1.0];
 }
 
 @end
