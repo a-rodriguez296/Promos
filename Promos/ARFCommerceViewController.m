@@ -33,7 +33,6 @@ static NSString* const kCommerceCellIdentifier        = @"CommerceCell";
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([ARFCommerceCell class]) bundle:nil] forCellReuseIdentifier:kCommerceCellIdentifier];
     
     self.commerceBanner = [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass([ARFCommerceBanner class]) owner:self options:nil] firstObject];
-    [self.commerceBanner setBackgroundColor:[UIColor greenColor]];
     [self.tableView setTableHeaderView:self.commerceBanner];
 
     

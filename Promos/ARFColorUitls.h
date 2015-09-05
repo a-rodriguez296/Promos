@@ -14,5 +14,7 @@
 @interface ARFColorUitls : NSObject
 
 +(UIColor *) backgroundColor;
++(UIColor *) greenTextColor;
+
 
 @end

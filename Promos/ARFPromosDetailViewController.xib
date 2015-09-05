@@ -29,7 +29,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="rEB-IK-HkC">
-                    <rect key="frame" x="136" y="63" width="176" height="22"/>
+                    <rect key="frame" x="136" y="58" width="176" height="22"/>
                     <fontDescription key="fontDescription" name="MyriadPro-Semibold" family="Myriad Pro" pointSize="22"/>
                     <color key="textColor" red="0.43529411759999997" green="0.7843137255" blue="0.1215686275" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
@@ -52,13 +52,13 @@
                     </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="KSV-Nj-0eM">
-                    <rect key="frame" x="136" y="95" width="176" height="19"/>
+                    <rect key="frame" x="136" y="90" width="176" height="19"/>
                     <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="19"/>
                     <color key="textColor" red="0.3921568627" green="0.3921568627" blue="0.3921568627" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="oeA-GO-5b6">
-                    <rect key="frame" x="136" y="127" width="37" height="16"/>
+                    <rect key="frame" x="136" y="128" width="37" height="16"/>
                     <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="16"/>
                     <color key="textColor" red="0.3921568627" green="0.3921568627" blue="0.3921568627" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
@@ -104,7 +104,7 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="oeA-GO-5b6" firstAttribute="bottom" secondItem="iHC-vG-N0z" secondAttribute="bottom" constant="-1" id="KmM-rD-Etm"/>
+                <constraint firstItem="oeA-GO-5b6" firstAttribute="bottom" secondItem="iHC-vG-N0z" secondAttribute="bottom" id="KmM-rD-Etm"/>
                 <constraint firstItem="rEB-IK-HkC" firstAttribute="leading" secondItem="oeA-GO-5b6" secondAttribute="leading" id="OdF-dQ-T0B"/>
                 <constraint firstAttribute="trailing" secondItem="KSV-Nj-0eM" secondAttribute="trailing" constant="8" id="Sry-H2-3wm"/>
                 <constraint firstItem="sJM-pP-s3C" firstAttribute="trailing" secondItem="Ju5-Gc-dhl" secondAttribute="trailing" id="Vkh-bA-azs"/>
@@ -117,9 +117,9 @@
                 <constraint firstItem="rEB-IK-HkC" firstAttribute="leading" secondItem="iHC-vG-N0z" secondAttribute="trailing" constant="8" id="fC2-Os-O8A"/>
                 <constraint firstItem="Ju5-Gc-dhl" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="n6p-dH-QUD"/>
                 <constraint firstAttribute="trailing" secondItem="Ju5-Gc-dhl" secondAttribute="trailing" constant="8" id="nHZ-9T-R5L"/>
-                <constraint firstItem="iHC-vG-N0z" firstAttribute="centerY" secondItem="KSV-Nj-0eM" secondAttribute="centerY" constant="-20" id="ox5-JO-W9G"/>
+                <constraint firstItem="iHC-vG-N0z" firstAttribute="centerY" secondItem="KSV-Nj-0eM" secondAttribute="centerY" constant="-15" id="ox5-JO-W9G"/>
                 <constraint firstItem="Ju5-Gc-dhl" firstAttribute="top" secondItem="iHC-vG-N0z" secondAttribute="bottom" constant="16" id="pih-vc-BeV"/>
-                <constraint firstItem="rEB-IK-HkC" firstAttribute="centerY" secondItem="iHC-vG-N0z" secondAttribute="centerY" constant="-10" id="qdP-Hd-C3b"/>
+                <constraint firstItem="rEB-IK-HkC" firstAttribute="centerY" secondItem="iHC-vG-N0z" secondAttribute="centerY" constant="-15" id="qdP-Hd-C3b"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <nil key="simulatedBottomBarMetrics"/>

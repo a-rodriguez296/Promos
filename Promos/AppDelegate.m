@@ -209,6 +209,8 @@
     
     [[UINavigationBar appearance] setTitleTextAttributes:navBarTitleTextAttributes];
     
+    //TabBar
+    [[UITabBarItem appearance] setTitleTextAttributes:@{ NSForegroundColorAttributeName : [ARFColorUitls greenTextColor] }forState:UIControlStateSelected];
 }
 
 
