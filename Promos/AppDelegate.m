@@ -198,18 +198,7 @@
     // TintColor asigna el color de los botones
     [[UINavigationBar appearance] setTintColor:[UIColor colorWithWhite:1.0
                                                                  alpha:1]];
-    
-    
-    //    for (NSString* family in [UIFont familyNames])
-    //    {
-    //        NSLog(@"%@", family);
-    //
-    //        for (NSString* name in [UIFont fontNamesForFamilyName: family])
-    //        {
-    //            NSLog(@"  %@", name);
-    //        }
-    //    }
-    
+
     
     UIFont *navbarFont = [UIFont fontWithName:kFontMyriadRegularSemiBold
                                          size:24];

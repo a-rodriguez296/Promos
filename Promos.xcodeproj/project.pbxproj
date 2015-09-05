@@ -32,6 +32,8 @@
 		9C87DEA11B8EA943001E34A9 /* ARFPassApiClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C87DEA01B8EA943001E34A9 /* ARFPassApiClient.m */; };
 		9CACF78F1B9A63F70090650B /* UIColor+Color.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CACF78E1B9A63F70090650B /* UIColor+Color.m */; };
 		9CACF7921B9A64000090650B /* ARFColorUitls.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CACF7911B9A64000090650B /* ARFColorUitls.m */; };
+		9CACF7981B9A670C0090650B /* MyriadPro-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9CACF7961B9A654E0090650B /* MyriadPro-SemiBold.otf */; };
+		9CACF7991B9A670C0090650B /* MyriadPro-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9CACF7951B9A650A0090650B /* MyriadPro-Regular.otf */; };
 		9CC2B2CE1B81870600F9F891 /* ARFPromosBannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CC2B2CD1B81870600F9F891 /* ARFPromosBannerView.m */; };
 		9CC2B2D01B81872300F9F891 /* ARFPromosBannerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CC2B2CF1B81872300F9F891 /* ARFPromosBannerView.xib */; };
 		9CC33A391B94DC460019889A /* request in Resources */ = {isa = PBXBuildFile; fileRef = 9CC33A381B94DC460019889A /* request */; };
@@ -560,6 +562,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CACF7981B9A670C0090650B /* MyriadPro-SemiBold.otf in Resources */,
+				9CACF7991B9A670C0090650B /* MyriadPro-Regular.otf in Resources */,
 				9CED3C5A1B7E5176009F667C /* ARFCommerceCell.xib in Resources */,
 				9CCCDF2C1B7AC6C7009FE8AB /* ARFCommerceBanner.xib in Resources */,
 				9C2EC12C1B705E2300811CF8 /* image3.jpg in Resources */,
