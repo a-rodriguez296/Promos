@@ -166,6 +166,7 @@ static NSString* const kPromoCellIdentifier        = @"Cell";
 -(void) pushToDetailWithObject:(PFObject *) object{
     
     ARFPromosDetailViewController *promoDetailVC = [[ARFPromosDetailViewController alloc] initWithPromo:object];
+    [promoDetailVC setHidesBottomBarWhenPushed:YES];
     [self.navigationController pushViewController:promoDetailVC animated:YES];
 }
 @end

@@ -114,7 +114,6 @@
 - (IBAction)showComments:(id)sender {
     
     ARFCommentsViewController * commentsVC = [[ARFCommentsViewController alloc] initWithObject:self.promo];
-    [commentsVC setHidesBottomBarWhenPushed:YES];
     [self.navigationController pushViewController:commentsVC animated:YES];
     
 }

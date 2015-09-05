@@ -48,6 +48,8 @@ static NSString* const kCommentCellIdentifier        = @"CommentCell";
 
 
 -(void) setup{
+    
+    [self setTitle:@"Comentarios"];
    
     //Cell registration
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([ARFCommentsCell class]) bundle:nil] forCellReuseIdentifier:kCommentCellIdentifier];
