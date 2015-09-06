@@ -48,4 +48,15 @@
     [self layoutIfNeeded]; // this line is key
 }
 
+
+#pragma mark IBActions
+- (IBAction)downloadPromo:(id)sender {
+    
+    if (self.delegate) {
+        [self.delegate didTapDownloadWithCell:self];
+    }
+    
+    
+}
+
 @end

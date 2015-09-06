@@ -8,9 +8,11 @@
 
 #import "ARFPromosViewController.h"
 #import "ARFConstants.h"
-#import "ARFPromoCell.h"
 #import "ARFPromosDetailViewController.h"
 #import "ARFPromosBannerView.h"
+#import "ARFPromoDonwloaderHelper.h"
+
+#import <PassKit/PassKit.h>
 
 #import <Parse/Parse.h>
 #import <ParseUI/ParseUI.h>
@@ -18,7 +20,7 @@
 
 static NSString* const kPromoCellIdentifier        = @"Cell";
 
-@interface ARFPromosViewController ()
+@interface ARFPromosViewController () <PKAddPassesViewControllerDelegate>
 
 @property (nonatomic, strong) ARFPromosBannerView * promosBanner;
 
@@ -30,9 +32,10 @@ static NSString* const kPromoCellIdentifier        = @"Cell";
 -(void)viewDidLoad{
     [super viewDidLoad];
     
+    //Cell register
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([ARFPromoCell class]) bundle:nil] forCellReuseIdentifier:kPromoCellIdentifier];
 
-    //Se agregó el header
+    //Table header addition
     self.promosBanner = [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass([ARFPromosBannerView class]) owner:self options:nil] firstObject];
     [self.promosBanner setDelegate:self];
     [self.tableView setTableHeaderView:self.promosBanner];
@@ -66,7 +69,7 @@ static NSString* const kPromoCellIdentifier        = @"Cell";
 
     
     //Setup autolayout del header
-    [self.promosBanner setFrame:CGRectMake(0, 0, self.view.frame.size.width, 120)];
+    [self.promosBanner setFrame:CGRectMake(0, 0, self.view.frame.size.width, 150)];
     [self.promosBanner layoutSubviews];
 }
 
@@ -134,6 +137,7 @@ static NSString* const kPromoCellIdentifier        = @"Cell";
     ARFPromoCell *cell = (ARFPromoCell *)[tableView dequeueReusableCellWithIdentifier:kPromoCellIdentifier];
 
     // Configure the cell
+    [cell setDelegate:self];
     [cell configureCellWithPFObject:object];
     
     return cell;
@@ -161,6 +165,15 @@ static NSString* const kPromoCellIdentifier        = @"Cell";
 }
 
 
+#pragma mark ARFPromoCellDelegate
+
+-(void)didTapDownloadWithCell:(ARFPromoCell *)cell{
+    NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
+    PFObject *promo = [self objectAtIndex:indexPath];
+    
+    [ARFPromoDonwloaderHelper donwloadPassWithObject:promo aViewController:self];
+}
+
 #pragma mark Utils
 
 -(void) pushToDetailWithObject:(PFObject *) object{
@@ -168,5 +181,13 @@ static NSString* const kPromoCellIdentifier        = @"Cell";
     ARFPromosDetailViewController *promoDetailVC = [[ARFPromosDetailViewController alloc] initWithPromo:object];
     [promoDetailVC setHidesBottomBarWhenPushed:YES];
     [self.navigationController pushViewController:promoDetailVC animated:YES];
+}
+
+#pragma mark - Pass controller delegate
+
+-(void)addPassesViewControllerDidFinish: (PKAddPassesViewController*) controller
+{
+    //pass added
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 @end

@@ -6,10 +6,12 @@
 //  Copyright (c) 2015 Alejandro Rodriguez. All rights reserved.
 //
 
-#import "PFQueryTableViewController.h"
+
 #import "ARFPromosBannerView.h"
+#import "ARFPromoCell.h"
 
+#import "PFQueryTableViewController.h"
 
-@interface ARFPromosViewController : PFQueryTableViewController <ARFPromosBannerDelegate>
+@interface ARFPromosViewController : PFQueryTableViewController <ARFPromosBannerDelegate,ARFPromoCellDelegate>
 
 @end

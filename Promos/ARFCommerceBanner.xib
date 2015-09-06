@@ -25,16 +25,24 @@
                     <color key="textColor" white="0.81000000000000005" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Icon_Notification" translatesAutoresizingMaskIntoConstraints="NO" id="A4D-pc-31k">
+                    <rect key="frame" x="272" y="16" width="57" height="45"/>
+                </imageView>
             </subviews>
             <color key="backgroundColor" white="0.95999999999999996" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstItem="EXt-0P-EXt" firstAttribute="top" secondItem="A4D-pc-31k" secondAttribute="bottom" constant="8" id="7TX-ZI-J8M"/>
                 <constraint firstAttribute="centerX" secondItem="EXt-0P-EXt" secondAttribute="centerX" id="MO2-pu-yfl"/>
                 <constraint firstAttribute="bottom" secondItem="EXt-0P-EXt" secondAttribute="bottom" constant="17" id="Nsm-h0-Xed"/>
+                <constraint firstItem="EXt-0P-EXt" firstAttribute="centerX" secondItem="A4D-pc-31k" secondAttribute="centerX" id="ilh-lD-pKM"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="170" y="3"/>
         </view>
     </objects>
+    <resources>
+        <image name="Icon_Notification" width="57" height="45"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

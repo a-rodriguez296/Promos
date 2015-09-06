@@ -28,16 +28,16 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="rEB-IK-HkC">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="rEB-IK-HkC">
                     <rect key="frame" x="136" y="58" width="176" height="22"/>
                     <fontDescription key="fontDescription" name="MyriadPro-Semibold" family="Myriad Pro" pointSize="22"/>
                     <color key="textColor" red="0.43529411759999997" green="0.7843137255" blue="0.1215686275" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZmR-Eb-PgE">
-                    <rect key="frame" x="0.0" y="269" width="140" height="30"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZmR-Eb-PgE">
+                    <rect key="frame" x="8" y="269" width="146" height="29"/>
                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                    <state key="normal" title="Compartir en Twitter">
+                    <state key="normal" backgroundImage="btnTwitter">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
@@ -51,13 +51,13 @@
                         <constraint firstAttribute="width" constant="120" id="lA3-IR-3si"/>
                     </constraints>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="KSV-Nj-0eM">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="KSV-Nj-0eM">
                     <rect key="frame" x="136" y="90" width="176" height="19"/>
                     <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="19"/>
                     <color key="textColor" red="0.3921568627" green="0.3921568627" blue="0.3921568627" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="oeA-GO-5b6">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="oeA-GO-5b6">
                     <rect key="frame" x="136" y="128" width="37" height="16"/>
                     <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="16"/>
                     <color key="textColor" red="0.3921568627" green="0.3921568627" blue="0.3921568627" alpha="1" colorSpace="calibratedRGB"/>
@@ -91,10 +91,10 @@
                         <action selector="showComments:" destination="-1" eventType="touchUpInside" id="L3R-jF-AlQ"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hCr-oo-Cdw">
-                    <rect key="frame" x="158" y="269" width="162" height="30"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hCr-oo-Cdw">
+                    <rect key="frame" x="166" y="269" width="146" height="29"/>
                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                    <state key="normal" title="Compartir en Facebook">
+                    <state key="normal" backgroundImage="btnFacebook">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
@@ -113,13 +113,17 @@
                 <constraint firstItem="sJM-pP-s3C" firstAttribute="top" secondItem="Ju5-Gc-dhl" secondAttribute="bottom" constant="19" id="Wwc-gU-4Lo"/>
                 <constraint firstItem="rEB-IK-HkC" firstAttribute="leading" secondItem="KSV-Nj-0eM" secondAttribute="leading" id="YKz-52-lni"/>
                 <constraint firstItem="iHC-vG-N0z" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="24" id="bwO-dv-MRR"/>
+                <constraint firstAttribute="trailing" secondItem="hCr-oo-Cdw" secondAttribute="trailing" constant="8" id="d4J-Z0-kBV"/>
                 <constraint firstAttribute="trailing" secondItem="rEB-IK-HkC" secondAttribute="trailing" constant="8" id="dhX-hV-dDL"/>
+                <constraint firstItem="ZmR-Eb-PgE" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="eUn-U5-iDJ"/>
                 <constraint firstItem="rEB-IK-HkC" firstAttribute="leading" secondItem="iHC-vG-N0z" secondAttribute="trailing" constant="8" id="fC2-Os-O8A"/>
+                <constraint firstItem="ZmR-Eb-PgE" firstAttribute="centerY" secondItem="hCr-oo-Cdw" secondAttribute="centerY" id="jtd-Z4-J6V"/>
                 <constraint firstItem="Ju5-Gc-dhl" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="n6p-dH-QUD"/>
                 <constraint firstAttribute="trailing" secondItem="Ju5-Gc-dhl" secondAttribute="trailing" constant="8" id="nHZ-9T-R5L"/>
                 <constraint firstItem="iHC-vG-N0z" firstAttribute="centerY" secondItem="KSV-Nj-0eM" secondAttribute="centerY" constant="-15" id="ox5-JO-W9G"/>
                 <constraint firstItem="Ju5-Gc-dhl" firstAttribute="top" secondItem="iHC-vG-N0z" secondAttribute="bottom" constant="16" id="pih-vc-BeV"/>
                 <constraint firstItem="rEB-IK-HkC" firstAttribute="centerY" secondItem="iHC-vG-N0z" secondAttribute="centerY" constant="-15" id="qdP-Hd-C3b"/>
+                <constraint firstItem="ZmR-Eb-PgE" firstAttribute="top" secondItem="sJM-pP-s3C" secondAttribute="bottom" constant="10" id="vWd-Ux-gAB"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <nil key="simulatedBottomBarMetrics"/>
@@ -128,6 +132,8 @@
     </objects>
     <resources>
         <image name="borderBackground" width="11" height="11"/>
+        <image name="btnFacebook" width="146" height="29"/>
+        <image name="btnTwitter" width="146" height="29"/>
         <image name="greenBackground" width="11" height="11"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

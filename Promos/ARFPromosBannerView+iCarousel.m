@@ -26,6 +26,7 @@
     
     [imgView setFile:file];
     [imgView loadInBackground];
+    [imgView setContentMode:UIViewContentModeScaleToFill];
     
     return imgView;
 }

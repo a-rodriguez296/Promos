@@ -10,13 +10,12 @@
 #import "ARFConstants.h"
 #import "ARFPassApiClient.h"
 #import "ARFCommentsViewController.h"
+#import "ARFPromoDonwloaderHelper.h"
 
 
 #import <Parse/Parse.h>
 #import <ParseUI/ParseUI.h>
 #import <PassKit/PassKit.h>
-#import <MBProgressHUD/MBProgressHUD.h>
-#import <ReactiveCocoa/ReactiveCocoa.h>
 
 
 @interface ARFPromosDetailViewController () <PKAddPassesViewControllerDelegate>
@@ -67,47 +66,50 @@
 #pragma mark IBActions
 - (IBAction)donwloadPass:(id)sender {
     
+    [ARFPromoDonwloaderHelper donwloadPassWithObject:self.promo aViewController:self];
     
-    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-    hud.labelText = @"Cargando";
     
-    NSString *passURL = [self.promo objectForKey:kPromosAttributePassURL];
-    ARFPassApiClient *passApiClient = [ARFPassApiClient sharedClient];
     
-    @weakify(self, hud);
-    [passApiClient downloadPassWithId:passURL withSuccess:^(NSData *passData) {
-        
-        @strongify(self, hud);
-        [hud hide:YES];
-        if (![PKPassLibrary isPassLibraryAvailable]) {
-            [[[UIAlertView alloc] initWithTitle:@"Error"
-                                        message:@"PassKit not available"
-                                       delegate:nil
-                              cancelButtonTitle:@"Pitty"
-                              otherButtonTitles: nil] show];
-            return;
-        }
-        else{
-
-            
-            NSError* error = nil;
-            PKPass *newPass = [[PKPass alloc] initWithData:passData
-                                                     error:&error];
-            PKAddPassesViewController *addController =
-            [[PKAddPassesViewController alloc] initWithPass:newPass];
-            
-            addController.delegate = self;
-            [self presentViewController:addController
-                               animated:YES
-                             completion:nil];
-            
-        }
-
-        
-        
-    } failure:^(NSError *error) {
-        
-    }];
+//    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+//    hud.labelText = @"Cargando";
+//    
+//    NSString *passURL = [self.promo objectForKey:kPromosAttributePassURL];
+//    ARFPassApiClient *passApiClient = [ARFPassApiClient sharedClient];
+//    
+//    @weakify(self, hud);
+//    [passApiClient downloadPassWithId:passURL withSuccess:^(NSData *passData) {
+//        
+//        @strongify(self, hud);
+//        [hud hide:YES];
+//        if (![PKPassLibrary isPassLibraryAvailable]) {
+//            [[[UIAlertView alloc] initWithTitle:@"Error"
+//                                        message:@"PassKit not available"
+//                                       delegate:nil
+//                              cancelButtonTitle:@"Pitty"
+//                              otherButtonTitles: nil] show];
+//            return;
+//        }
+//        else{
+//
+//            
+//            NSError* error = nil;
+//            PKPass *newPass = [[PKPass alloc] initWithData:passData
+//                                                     error:&error];
+//            PKAddPassesViewController *addController =
+//            [[PKAddPassesViewController alloc] initWithPass:newPass];
+//            
+//            addController.delegate = self;
+//            [self presentViewController:addController
+//                               animated:YES
+//                             completion:nil];
+//            
+//        }
+//
+//        
+//        
+//    } failure:^(NSError *error) {
+//        
+//    }];
     
     
 }

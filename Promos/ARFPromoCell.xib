@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
         <mutableArray key="MyriadPro-Regular.otf">
@@ -31,33 +30,36 @@
                             <constraint firstAttribute="width" constant="52" id="qX8-Cr-gPh"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AJZ-Se-H2d">
-                        <rect key="frame" x="85" y="9" width="42" height="20"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AJZ-Se-H2d" userLabel="lblPromo">
+                        <rect key="frame" x="85" y="9" width="41" height="17"/>
                         <fontDescription key="fontDescription" name="MyriadPro-Semibold" family="Myriad Pro" pointSize="17"/>
                         <color key="textColor" red="0.43529411764705883" green="0.78431372549019607" blue="0.12156862745098039" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SEq-Cw-nSv">
-                        <rect key="frame" x="244" y="8" width="52" height="52"/>
-                        <color key="backgroundColor" red="0.43529411759999997" green="0.7843137255" blue="0.1215686275" alpha="1" colorSpace="calibratedRGB"/>
-                        <state key="normal">
-                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                        </state>
-                    </button>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Almacenes Éxito" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nbU-wG-gXJ">
-                        <rect key="frame" x="85" y="45" width="97" height="16"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Almacenes Éxito" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nbU-wG-gXJ" userLabel="lblCommerce">
+                        <rect key="frame" x="85" y="48" width="89" height="13"/>
                         <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="13"/>
                         <color key="textColor" red="0.39215686274509803" green="0.39215686274509803" blue="0.39215686274509803" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HNx-8K-1zV">
-                        <rect key="frame" x="85" y="27" width="35" height="17"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HNx-8K-1zV" userLabel="lblPromoDescription">
+                        <rect key="frame" x="85" y="28" width="32" height="14"/>
                         <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="14"/>
                         <color key="textColor" red="0.39215686274509803" green="0.39215686274509803" blue="0.39215686274509803" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SEq-Cw-nSv">
+                        <rect key="frame" x="280" y="19" width="32" height="32"/>
+                        <state key="normal" backgroundImage="CutCoupon">
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <connections>
+                            <action selector="downloadPromo:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="3on-yE-IWH"/>
+                        </connections>
+                    </button>
                 </subviews>
                 <constraints>
+                    <constraint firstAttribute="trailing" secondItem="SEq-Cw-nSv" secondAttribute="trailing" constant="8" id="0t7-H1-w4Q"/>
                     <constraint firstItem="HNx-8K-1zV" firstAttribute="centerY" secondItem="P7h-6B-43y" secondAttribute="centerY" id="6Ld-V0-9ju"/>
                     <constraint firstItem="AJZ-Se-H2d" firstAttribute="top" secondItem="P7h-6B-43y" secondAttribute="top" id="BEv-8j-xvS"/>
                     <constraint firstItem="HNx-8K-1zV" firstAttribute="leading" secondItem="AJZ-Se-H2d" secondAttribute="leading" id="Lye-tb-DA6"/>
@@ -65,11 +67,8 @@
                     <constraint firstItem="nbU-wG-gXJ" firstAttribute="bottom" secondItem="P7h-6B-43y" secondAttribute="bottom" id="bFr-Dy-SbD"/>
                     <constraint firstItem="AJZ-Se-H2d" firstAttribute="leading" secondItem="P7h-6B-43y" secondAttribute="trailing" constant="16" id="dWs-W9-4zR"/>
                     <constraint firstItem="P7h-6B-43y" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="17" id="ihi-25-OGp"/>
-                    <constraint firstItem="SEq-Cw-nSv" firstAttribute="centerY" secondItem="P7h-6B-43y" secondAttribute="centerY" constant="-1" id="isb-LQ-NlE"/>
-                    <constraint firstItem="SEq-Cw-nSv" firstAttribute="height" secondItem="P7h-6B-43y" secondAttribute="height" id="oWO-XV-WbW"/>
-                    <constraint firstItem="SEq-Cw-nSv" firstAttribute="width" secondItem="P7h-6B-43y" secondAttribute="width" id="qNw-Bj-4kp"/>
                     <constraint firstAttribute="centerY" secondItem="P7h-6B-43y" secondAttribute="centerY" id="qm5-tU-DQs"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="SEq-Cw-nSv" secondAttribute="trailing" constant="16" id="s7v-PY-yrZ"/>
+                    <constraint firstItem="SEq-Cw-nSv" firstAttribute="centerY" secondItem="P7h-6B-43y" secondAttribute="centerY" id="sgm-iU-gjg"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
@@ -81,4 +80,7 @@
             <point key="canvasLocation" x="677" y="245"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="CutCoupon" width="32" height="32"/>
+    </resources>
 </document>
